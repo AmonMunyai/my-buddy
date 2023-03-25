@@ -131,6 +131,45 @@ footer {
     opacity: 0.6;
 }
 
+/* panels */
+
+.panel_item {
+    overflow: hidden;
+    border-radius: 1rem;
+    background-color: #222326;
+}
+
+.panel_item.is-uj {
+    background-color: #f26522;
+}
+
+.panel_item-content {
+    padding: 4rem;
+}
+
+.icon-tile {
+    display: inline-block;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    background-color: #ecf1f0;
+}
+
+.panels_2-column {
+    display: grid;
+    grid-auto-rows: 1fr;
+    gap: 1.5rem;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+}
+
+.panels_3-column {
+    display: grid;
+    grid-auto-rows: 1fr;
+    gap: 1.5rem;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+}
+
 /* helpers-padding */
 
 .padding-global {
@@ -281,5 +320,4 @@ footer {
     font-weight: 500;
     line-height: 1.25;
     letter-spacing: 0.2em;
-    text-transform: uppercase;
 }
