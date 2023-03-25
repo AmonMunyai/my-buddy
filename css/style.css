@@ -1,5 +1,151 @@
 * {
     box-sizing: border-box;
+    font-family: sans-serif;
     margin: 0;
     padding: 0;
+}
+
+body {
+    background-color: #16171b;
+    color: #ecf1f0;
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 1.5;
+}
+
+
+
+/* links */
+
+a {
+    color: #a2a2a4;
+    text-decoration: none;
+    transition: all 300ms;
+}
+
+a:hover {
+    color: #ecf1f0;
+}
+
+/* lists */
+
+li {
+    list-style: none;
+    display: inline-block;
+    padding: 0rem 1rem;
+}
+
+/* navigation bar */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2.5rem 10rem 1.25rem;
+    border-bottom: 1px solid hsl(0, 0%, 100%, 0.1);
+}
+
+.navbar_logo {
+    margin-right: 2rem;
+    letter-spacing: 0.04em;
+    transition: transform 300ms;
+}
+
+.navbar_logo:hover {
+    transform: scale(1.5);
+}
+
+.navbar_links {
+    margin-right: auto;
+}
+
+.button {
+    padding: 0.75rem 1.5rem 0.6rem;
+    border: 0.125rem solid #ecf1f0;
+    border-radius: 0.25rem;
+    letter-spacing: 0.04em;
+    font-size: 0.875rem;
+    color: #ecf1f0;
+    font-weight: 400;
+    text-align: center;
+    transition: font-size 300ms;
+}
+
+.button:hover {
+    font-size: 1.125rem;
+}
+
+.button#join-btn {
+    margin-left: 0.5rem;
+    border-color: #f26522;
+}
+
+/* helpers-text */
+
+.text-color-white {
+    color: #ecf1f0;
+}
+
+.text-color-uj {
+    color: #f26522;
+}
+
+.text-size-small {
+    font-size: 0.875rem;
+}
+
+.text-size-medium {
+    font-size: 1.25rem;
+}
+
+.text-size-large {
+    font-size: 1.5rem;
+}
+
+.text-align-center {
+    text-align: center;
+}
+
+.text-align-left {
+    text-align: left;
+}
+
+/* helpers-headings */
+
+.heading-style-h1 {
+    font-size: 5rem;
+    font-weight: 300;
+    line-height: 1.1;
+}
+
+.heading-style-h2 {
+    font-size: 3.625rem;
+    font-weight: 300;
+    line-height: 1.25;
+}
+
+.heading-style-h3 {
+    font-size: 2.625rem;
+    font-weight: 400;
+    line-height: 1.25;
+}
+
+.heading-style-h4 {
+    font-size: 1.875rem;
+    font-weight: 400;
+    line-height: 1.25;
+}
+
+.heading-style-h5 {
+    font-size: 1.375rem;
+    font-weight: 400;
+    line-height: 1.25;
+}
+
+.heading-style-h6 {
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.25;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
 }
