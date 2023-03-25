@@ -143,6 +143,13 @@ footer {
     background-color: #f26522;
 }
 
+.panel_item.is-3-column {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 2rem;
+}
+
 .panel_item-content {
     padding: 4rem;
 }
@@ -156,18 +163,16 @@ footer {
 
 .panels_2-column {
     display: grid;
-    grid-auto-rows: 1fr;
-    gap: 1.5rem;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
+    gap: 1.5rem;
 }
 
 .panels_3-column {
     display: grid;
-    grid-auto-rows: 1fr;
-    gap: 1.5rem;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto;
+    gap: 1.5rem;
 }
 
 /* helpers-padding */
@@ -201,7 +206,7 @@ footer {
 .padding-section-medium {
     padding-top: 6rem;
     padding-bottom: 6rem;
-    /* line-height: 1.5; */
+    line-height: 1.5;
 }
 
 .padding-section-large {
@@ -294,7 +299,7 @@ footer {
 .heading-style-h2 {
     font-size: 3.625rem;
     font-weight: 300;
-    line-height: 1.25;
+    line-height: 1.5;
 }
 
 .heading-style-h3 {
