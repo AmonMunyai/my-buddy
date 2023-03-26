@@ -57,6 +57,18 @@ li {
     margin-right: auto;
 }
 
+/* sections */
+
+img {
+    display: inline-block;
+    max-width: 100%;
+}
+
+main > header {
+    width: 100%;
+    max-width: 80rem;
+    margin: 0 auto;
+}
 
 /* blog-panels */
 
@@ -121,6 +133,7 @@ li {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+    gap: 1.5rem;
 }
 
 .simple-row.is-tight {
@@ -194,11 +207,13 @@ li {
     border-color: #f26522;
 }
 
-.button#get_started-btn {
+.button#get_started-btn,
+.button#learn_more-btn {
     color: #16171b;
     background-color: #ecf1f0;
     font-weight: 400;
 }
+
 
 /* footer */
 
@@ -464,6 +479,41 @@ footer {
     font-weight: 500;
     line-height: 1.25;
     letter-spacing: 0.2em;
+}
+
+/* helpers-max-width */
+
+.max-width-small,
+.max-width-medium,
+.max-width-large,
+.max-width-xlarge,
+.max-width-xxlarge,
+.max-width-full {
+    width: 100%;
+}
+
+.max-width-small {
+    max-width: 20rem;
+}
+
+.max-width-medium {
+    max-width: 32rem;
+}
+
+.max-width-large {
+    max-width: 48rem;
+}
+
+.max-width-xlarge {
+    max-width: 64rem;
+}
+
+.max-width-xxlarge {
+    max-width: 80rem;
+}
+
+.max-width-full {
+    max-width: none;
 }
 
 /* helpers-display */
