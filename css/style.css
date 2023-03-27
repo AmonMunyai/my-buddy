@@ -156,7 +156,8 @@ main > header {
 /* pills */
 
 .pill {
-    padding: 0.125rem 0.5rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
     border-radius: 3rem;
     background-color: #f26522;
     color: #16171b;
@@ -169,14 +170,15 @@ main > header {
     padding: 0.25rem 1rem;
     font-size: 0.8rem;
     font-weight: 400;
-    transition: transform 200ms;
+    transition: font-size 300ms;
 }
 
 .pill.is-large:hover {
-    transform: scale(1.125);
+    color: #16171b;
+    font-size: 1rem;
 }
 
-.pill:hover {
+.pill:not(.is-large):hover {
     opacity: 0.6;
     color: #16171b;
 }
