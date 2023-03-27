@@ -39,7 +39,7 @@ li {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 2.5rem 10rem 1.25rem;
+    padding: 2rem 8rem 1.25rem;
     border-bottom: 1px solid hsl(0, 0%, 100%, 0.1);
 }
 
@@ -151,6 +151,13 @@ main > header {
     border-radius: 50%;
     background-color: red; /* will be replaced by profile pic */
     filter: saturate(0%);
+}
+
+.profile-pic img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
 }
 
 /* pills */
