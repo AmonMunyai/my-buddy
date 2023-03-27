@@ -301,6 +301,112 @@ footer {
     gap: 1.5rem;
 }
 
+/* modal */
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(10px);
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    visibility: hidden;
+}
+
+.modal.is-active {
+    visibility: visible;
+}
+
+.is-active .modal-content {
+    transform: scale(1);
+}
+
+.modal-dialog {
+    width: 20rem;
+    max-width: 100%;
+    border-radius: 0.5rem;
+    backdrop-filter: blur(50px);
+}
+
+.modal-content {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 1.5rem 1.5rem;
+    transform: scale(0);
+    transition: transform 400ms;
+
+}
+
+.close-icon {
+    margin-left: auto;
+    font-size: 1.125rem;
+    transform: rotate(45deg);
+    cursor: pointer;
+    padding: 1rem;
+    border: 0;
+    background-color: transparent;
+    color: #ecf1f0;
+    transition: color 500ms;
+    font-weight: 500;
+}
+
+.close-icon:hover {
+    color: #f26522;
+}
+
+.modal-title {
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 1.25;
+    letter-spacing: 0.2em;
+}
+
+.form-group {
+    margin-top: 2rem;
+}
+
+.form-input-wrapper {
+    border: 1px solid #ecf1f0;
+    border-radius: 0.25rem;
+}
+
+.form-input > input {
+    width: 100%;
+    color: #ecf1f0;
+    background-color: transparent;
+    border: transparent;
+    padding: 1rem 1.5rem;
+}
+
+.modal-footer {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+
+.button-submit {
+    width: 100%;
+    cursor: pointer;
+    letter-spacing: 0.05rem;
+    border-radius: 0.25rem;
+    padding-top: 0.565rem;
+    padding-bottom: 0.565rem;
+    border: none;
+    transition: background-color 300ms, font-size 300ms;
+}
+
+.button-submit:hover {
+    background-color: #f26522;
+    color: #ecf1f0;
+    font-size: 1rem;
+}
+
+.modal a:hover {
+    color: #f26522;
+}
+
 /* helpers-padding */
 
 .padding-global {
@@ -394,13 +500,13 @@ footer {
     color: #f26522;
 }
 
-.text-size-small {
-    font-size: 0.875rem;
-}
-
-.text-size-small-plus {
+.text-size-xsmall {
     font-size: 0.75rem;
     line-height: 1rem;
+}
+
+.text-size-small {
+    font-size: 0.875rem;
 }
 
 .text-size-medium {
@@ -445,6 +551,10 @@ footer {
 
 .text-weight-xbold {
     font-weight: 800;
+}
+
+.underline {
+    text-decoration: underline;
 }
 
 /* helpers-headings */
@@ -526,4 +636,12 @@ footer {
 .inline-block {
     display: inline-block;
     max-width: 100%;
+}
+
+/* helpers-misc */
+
+.line-divider {
+    width: 100%;
+    height: 1px;
+    background-color: hsl(0, 0%, 100%, 0.1);
 }
