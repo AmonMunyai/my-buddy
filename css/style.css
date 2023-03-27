@@ -416,6 +416,10 @@ footer {
     padding-left: 2.5rem;
 }
 
+.padding-xsmall {
+    padding: 0.5rem;
+}
+
 .padding-small {
     padding: 1rem;
 }
