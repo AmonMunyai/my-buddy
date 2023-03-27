@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>myBuddy Blog - Student Resources and Insights</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- navigation bar -->
+    <header>
+        <nav class="navbar">
+            <a href="index.html" class="navbar_logo-link text-color-white">
+                <h1 class="navbar_logo">my<span class="text-color-uj">Buddy</span></h1>
+            </a>
+            <ul class="navbar_links">
+                <li><a href="#" class="navbar_link">Blog</a></li>
+                <li><a href="#" class="navbar_link">Docs</a></li>
+                <li><a href="#" class="navbar_link">Developers</a></li>
+            </ul>
+            <div class="navbar_buttons">
+                <a href="#" id="login-btn" class="button" onclick="toggleModal('login')">Log in</a>
+                <a href="#" id="join-btn" class="button" onclick="toggleModal('join')">Join</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- main component -->
+    <main class="main-wrapper">
+        <!-- section header -->
+        <header class="section_header">
+            <div class="padding-global">
+                <div class="container-medium">
+                    <div class="padding-section-medium">
+                        <div class="text-align-center">
+                            <h1 class="text-color-white heading-style-h1">Student Blog</h1>
+                            <div class="spacing-block padding-small-plus"></div>
+                            <p class="text-size-large">Student resources & insights from the myBuddy team and partners</p>
+                            <div class="spacing-block padding-small-plus"></div>
+                            <div class="blog-categories_list-wrapper">
+                                <ul class="blog-categories_list">
+                                    <li class="blog-catergories_item">
+                                        <a href="#" class="pill is-large">Career Insights</a>
+                                    </li>
+                                    <li class="blog-catergories_item">
+                                        <a href="#" class="pill is-large">NSFAS</a>
+                                    </li>
+                                    <li class="blog-catergories_item">
+                                        <a href="#" class="pill is-large">Leadership</a>
+                                    </li>
+                                    <li class="blog-catergories_item">
+                                        <a href="#" class="pill is-large">Study Tips</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- section latest -->
+        <section class="section_latest">
+            <div class="padding-global">
+                <div class="container-large">
+                    <div class="padding-section-medium is-padding-bottom-only">
+                        <div class="blog_item">
+                            <div class="blog_item-featured">
+                                <a href="#" class="blog_image-wrapper inline-block">
+                                    <img src="https://fundiconnect.co.za/wp-content/uploads/2021/06/first-job.jpg" class="blog_image" loading="lazy" alt>
+                                </a>
+                                <div class="blog_item-content">
+                                    <div class="blog_item-content-top">
+                                        <div class="simple-row">
+                                            <a href="#" class="pill">Career Insights</a>
+                                        </div>
+                                        <div class="spacing-block padding-small-plus"></div>
+                                        <a href="#" class="inline-block text-color-white">
+                                            <h3 class="heading-style-h3">7 Tips for getting a job after university.</h3>
+                                            <div class="spacing-block padding-small"></div>
+                                            <p class="text-size-medium">The transition from university to the working world can be incredibly difficult, but dont't worry!  We're here to guide you along the way. From writing a graduate CV and cover letter to applying for jobs, get work-ready with our 7 awesome tips for getting your..</p>        
+                                        </a>
+                                        <div class="spacing-block padding-small-plus"></div>
+                                    </div>
+                                    <div class="blog_author-wrapper">
+                                        <div class="profile-pic">
+                                            <img src="" loading="lazy" alt>
+                                        </div>
+                                        <div class="blog_author-text">
+                                            <div class="text-weight-bold">FundiConnect</div>
+                                            <div class="blog_date-wrapper">
+                                                <div class="text-size-small-plus">February 23, 2023</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>    
+                            </div>
+                        </div>
+                        <div class="spacing-block padding-small-plus"></div>
+                        <ul class="blog_list">
+                            <li class="blog_item">
+                                <div class="blog_item-content">
+                                    <div class="blog_item-content-top">
+                                        <div class="simple-row">
+                                            <a href="#" class="pill">Study Tips</a>
+                                        </div>
+                                        <div class="spacing-block padding-small-plus"></div>
+                                        <a href="#" class="inline-block text-color-white">
+                                            <h3 class="heading-style-h3">How to Incorporate Studying into a Daily Routine</h3>
+                                            <div class="spacing-block padding-small"></div>
+                                            <p class="text-size-medium">The best way to stay sharp and keep learning is to make studying a dailyy habit. If you struggle to form new habits or get routines to stick, here are 6 tips to keep on track.</p>        
+                                        </a>
+                                        <div class="spacing-block padding-small-plus"></div>
+                                    </div>
+                                    <div class="blog_author-wrapper">
+                                        <div class="profile-pic">
+                                            <img src="" loading="lazy" alt>
+                                        </div>
+                                        <div class="blog_author-text">
+                                            <div class="text-weight-bold">Lorem Ipsum</div>
+                                            <div class="blog_date-wrapper">
+                                                <div class="text-size-small-plus">February 10, 2023</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>    
+                            </li>
+                            <li class="blog_item">
+                                <div class="blog_item-content">
+                                    <div class="blog_item-content-top">
+                                        <div class="simple-row">
+                                            <a href="#" class="pill">NSFAS</a>
+                                        </div>
+                                        <div class="spacing-block padding-small-plus"></div>
+                                        <a href="#" class="inline-block text-color-white">
+                                            <h3 class="heading-style-h3">Are you a first year student?</h3>
+                                            <div class="spacing-block padding-small"></div>
+                                            <p class="text-size-medium">Need a place to stay near campus? We've got you covered! Heres a list of affordable and NSFAS accredited accomodation near your campus.</p>        
+                                        </a>
+                                        <div class="spacing-block padding-small-plus"></div>
+                                    </div>
+                                    <div class="blog_author-wrapper">
+                                        <div class="profile-pic">
+                                            <img src="" loading="lazy" alt>
+                                        </div>
+                                        <div class="blog_author-text">
+                                            <div class="text-weight-bold">Lorem Ipsum</div>
+                                            <div class="blog_date-wrapper">
+                                                <div class="text-size-small-plus">January 15, 2023</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>    
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- footer -->
+    <footer class="align-center">
+        <div class="footer-wrapper">
+            <ul class="footer_legal-list align-center text-size-small">
+                <li class="footer_credit-text">&copy; University of Johannesburg</li>
+                <li><a href="#" class="footer_legal-link">Privacy Policy</a></li>
+                <li><a href="#" class="footer_legal-link">Terms of Service</a></li>
+                <li><a href="#" class="footer_legal-link">About</a></li>
+                <li class="footer_credit-text">
+                    powered by
+                    <a href="https://www.uj.ac.za/" target="_blank" class="footer_legal-link">UJ</a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+
+    <!-- modal login -->
+    <div class="modal" id="modal-login">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <button id="close-btn" class="close-icon" onclick="toggleModal('close')">+</button>
+                <div class="modal-header">
+                    <h1 class="modal-title text-align-center">Sign In</h1>
+                </div>
+                <div class="spacing-block padding-small"></div>
+                <div class="line-divider"></div>
+                <div class="modal-body">
+                    <form action="#">
+                        <div class="form-group form-input-wrapper">
+                            <div class="form-input">
+                                <input type="text" placeholder="Email" required>
+                            </div>
+                            <div class="line-divider"></div>
+                            <div class="form-input">
+                                <input type="password" placeholder="Password" required>
+                            </div>
+                        </div>
+                        <p class="text-align-right text-size-xsmall">
+                            <a href="#" onclick="toggleModal('forgot-password')">Forgot your password?</a>
+                        </p>
+                        <div class="form-group">
+                            <button type="submit" class="button-submit">Log in</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer text-size-small text-align-center">
+                    <a href="#" class="underline" onclick="toggleModal('join')">Sign up</a>
+                    <span>if you don't have an account yet.</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- modal join -->
+    <div class="modal" id="modal-join">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <button id="close-btn" class="close-icon" onclick="toggleModal('close')">+</button>
+                <div class="modal-header">
+                    <h1 class="modal-title text-align-center">Create Account</h1>
+                </div>
+                <div class="spacing-block padding-small"></div>
+                <div class="line-divider"></div>
+                <div class="modal-body">
+                    <form action="#">
+                        <div class="form-group form-input-wrapper">
+                            <div class="form-input">
+                                <input type="text" placeholder="Email" required>
+                            </div>
+                            <div class="line-divider"></div>
+                            <div class="form-input">
+                                <input type="text" placeholder="Username" required>
+                            </div>
+                            <div class="line-divider"></div>
+                            <div class="form-input">
+                                <input type="password" placeholder="Password" required>
+                            </div>    
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="button-submit">Join</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer text-size-small text-align-center">
+                    <span>By creating an account, you agree to our</span>
+                    <a href="#">Privacy Policy</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- modal forgot password -->
+    <div class="modal" id="modal-forgot-password">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <button id="close-btn" class="close-icon" onclick="toggleModal('close')">+</button>
+                <div class="modal-header">
+                    <h1 class="modal-title text-align-center">Reset Password</h1>
+                </div>
+                <div class="spacing-block padding-small"></div>
+                <div class="line-divider"></div>
+                <div class="modal-body">
+                    <form action="#">
+                        <div class="form-group form-input-wrapper">
+                            <div class="form-input">
+                                <input type="text" placeholder="Email" required>
+                            </div>    
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="button-submit">Forgot</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer text-size-small text-align-center">
+                    <a href="#" onclick="toggleModal('login')">Back to Sign In</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- javascript -->
+    <script src="js/script.js" defer></script>
+</body>
+</html>
