@@ -22,10 +22,6 @@
                 <li><a href="#" class="navbar_link">Docs</a></li>
                 <li><a href="#" class="navbar_link">Developers</a></li>
             </ul>
-            <div class="navbar_buttons">
-                <!-- <a href="#" id="ask-a-buddy-btn" class="button" onclick="toggleModal('login')">Ask a Buddy</a> -->
-                <a href="#" id="search-btn" class="button" onclick="toggleModal('search')">Search</a>
-            </div>
         </nav>
     </header>
 
@@ -34,24 +30,26 @@
         <section class="section_home">
             <div class="padding-global">
                 <div class="container">
-                    <!-- left sidebar navigation -->
+                    <!-- left side navigation bar -->
                     <nav class="sidebar_left">
                         <div class="profile text-align-center">
                             <a href="#" class="profile-link">
                                 <div class="profile-pic">
-                                    <img src="https://images.unsplash.com/photo-1529665253569-6d01c0eaf7b6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8cHJvZmlsZXxlbnwwfHwwfHw%3D&w=1000&q=80" loading="lazy" alt>
+                                    <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png" loading="lazy" alt>
                                 </div>
+                                <div class="spacing-block padding-small"></div>
                                 <div class="profile-name">
                                     <h4>John Doe</h4>
                                 </div>
                             </a>
                         </div>
                         <div class="line-divider"></div>
-                        <div class="sidebar_left-links">
+                        <div class="sidebar_left-links text-size-small">
                             <ul>
                                 <li><a href="#" class="sidebar-link"><i class="fa fa-home"></i>Home</a></li>
                                 <li><a href="#" class="sidebar-link"><i class="fa fa-compass"></i>Explore</a></li>
-                                <li><a href="#" class="sidebar-link"><i class="fa fa-bell"></i>Notifications</a></li>
+                                <li><a href="#" class="sidebar-link is-hidden"><i class="fa fa-bell"></i>Notifications</a></li>
+                                <li><a href="#" class="sidebar-link"><i class="fa fa-tag"></i>Tags</a></li>
                                 <li><a href="#" class="sidebar-link"><i class="fa fa-users"></i>Communities</a></li>
                             </ul>
                         </div>
@@ -62,10 +60,10 @@
                         <div class="spacing-block padding-small"></div>
                         <form action="#" class="ask-buddy">
                             <div class="profile-pic">
-                                <img src="https://images.unsplash.com/photo-1529665253569-6d01c0eaf7b6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8cHJvZmlsZXxlbnwwfHwwfHw%3D&w=1000&q=80" loading="lazy" alt>
+                                <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png" loading="lazy" alt>
                             </div>
                             <input type="text" placeholder="Ask a Buddy?">
-                            <input class="button" type="submit" value="Ask">
+                            <input class="button" type="submit" value="Post">
                         </form>
                         <div class="spacing-block padding-medium"></div>
                         <ul class="posts">
@@ -86,6 +84,10 @@
                                                 <span title="2023-04-01 12:01:56Z" class="relative-time">47 secs ago</span>
                                             </time>
                                         </div>
+                                        <div class="spacing-block padding-small"></div>
+                                        <div class="post-content-title">
+                                            <a href="#" class="text-color-uj heading-style-h5">Lorem ipsum dolor sit amet.</a>
+                                        </div>
                                     </div>
                                     <div class="spacing-block padding-small"></div>
                                     <div class="post-content-body">
@@ -105,7 +107,6 @@
                                     </div>
                                 </div>
                             </li>
-
                             <li class="post">
                                 <div class="post-content">
                                     <div class="post-content-header">
@@ -122,6 +123,10 @@
                                                 asked
                                                 <span title="2023-04-01 12:01:56Z" class="relative-time">23 hours ago</span>
                                             </time>
+                                        </div>
+                                        <div class="spacing-block padding-small"></div>
+                                        <div class="post-content-title">
+                                            <a href="#" class="text-color-uj heading-style-h5">Lorem ipsum dolor sit amet.</a>
                                         </div>
                                     </div>
                                     <div class="spacing-block padding-small"></div>
@@ -159,6 +164,10 @@
                                                 <span title="2023-04-01 12:01:56Z" class="relative-time">2 days ago</span>
                                             </time>
                                         </div>
+                                        <div class="spacing-block padding-small"></div>
+                                        <div class="post-content-title">
+                                            <a href="#" class="text-color-uj heading-style-h5">Lorem ipsum dolor sit amet.</a>
+                                        </div>
                                     </div>
                                     <div class="spacing-block padding-small"></div>
                                     <div class="post-content-body">
@@ -194,6 +203,10 @@
                                                 asked
                                                 <span title="2023-04-01 12:01:56Z" class="relative-time">2 days ago</span>
                                             </time>
+                                        </div>
+                                        <div class="spacing-block padding-small"></div>
+                                        <div class="post-content-title">
+                                            <a href="#" class="text-color-uj heading-style-h5">Lorem ipsum dolor sit amet.</a>
                                         </div>
                                     </div>
                                     <div class="spacing-block padding-small"></div>
@@ -231,6 +244,10 @@
                                                 <span title="2023-04-01 12:01:56Z" class="relative-time">3 days ago</span>
                                             </time>
                                         </div>
+                                        <div class="spacing-block padding-small"></div>
+                                        <div class="post-content-title">
+                                            <a href="#" class="text-color-uj heading-style-h5">Lorem ipsum dolor sit amet.</a>
+                                        </div>
                                     </div>
                                     <div class="spacing-block padding-small"></div>
                                     <div class="post-content-body">
@@ -252,7 +269,46 @@
                             </li>
                         </ul>
                     </div>
-                    <div>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.</div>         
+
+                    <!-- right side navigation bar -->
+                    <div class="sidebar_right">
+                        <div class="sidebar_right-content">
+                            <div class="searchbox-content">
+                                <div class="searchbox-header">
+                                    <h3>Search</h3>
+                                    <div class="searchbar">
+                                        <input type="text" placeholder="Search..">
+                                        <button id="search-btn"><i class="fa fa-search"></i></button>
+                                    </div>    
+                                </div>
+                                <div class="line-separator-wrapper">
+                                    <div class="line-divider"></div>
+                                    <h5 class="line-separator">Recents</h5>
+                                    <div class="line-divider"></div>
+                                </div>
+                                <div class="searchox-body">
+                                    <div class="text-size-xsmall text-align-center is-hidden">No recent searches.</div>
+                                    <ul class="recent-search-list">
+                                        <li><a href="#" class="recent-search-item">Lorem ipsum dolor sit amet.</a></li>
+                                        <li><a href="#" class="recent-search-item">Lorem sit amet.</a></li>
+                                        <li><a href="#" class="recent-search-item">Ipsum dolor amet.</a></li>
+                                    </ul>
+                                </div>
+                            </div>    
+                        </div>
+                        <div class="spacing-block padding-medium"></div>
+                        <div class="sidebar_right-content">
+                            <div class="notifications-content">
+                                <div class="notifications-header">
+                                    <h3>Notifications</h3>
+                                </div>
+                                <div class="line-divider"></div>
+                                <div class="notifications-body">
+                                    <div class="text-size-xsmall text-align-center">No new notifications.</div>
+                                </div>
+                            </div>    
+                        </div>
+                    </div>
                 </div>
                 
             </div>

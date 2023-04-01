@@ -6,8 +6,8 @@
     grid-template-columns: 18vh auto 20vw;
     column-gap: 2rem;
     position: relative;
+    margin-top: 5rem;
 }
-
 
 .sidebar_left {
     height: max-content;
@@ -36,9 +36,23 @@
 .sidebar-link {
     display: flex;
     align-items: center;
-    height: 4rem;
     cursor: pointer;
     column-gap: 1rem;
+    border: 2px solid #222326;
+    color: #ecf1f0;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+    padding: 0.25rem 0.5rem;
+}
+
+.sidebar-link:hover {
+    font-size: 1rem;
+}
+
+.fa {
+    max-width: 1.25rem;
+    max-height: 1.25rem;
+    text-align: center;
 }
 
 .ask-buddy {
@@ -47,7 +61,7 @@
     align-items: center;
     justify-content: space-between;
     background: #222326;
-    margin-top: 1rem;
+    margin-top: -4rem;
     padding: 0.5rem 1rem;
     border-radius: 0.5rem;
 }
@@ -68,6 +82,15 @@
     color: #ecf1f0;
     background-color: #f26522;
     border: 0;
+}
+
+.ask-buddy .profile-pic img {
+    border-radius: 25%;
+}
+
+.ask-buddy .profile-pic {
+    transform: scale(0.8);
+    border-radius: 25%;
 }
 
 /* post */
@@ -127,4 +150,72 @@
     height: 100%;
     object-fit: cover;
     border-radius: 25%;
+}
+
+/* left side navigation bar */
+
+.sidebar_right {
+    height: max-content;
+    position: sticky;
+    bottom: 0;
+    width: 100%;
+}
+
+.sidebar_right-content{
+    border-radius: 0.5rem;
+    background-color: #222326;
+    padding: 2rem 1rem;
+
+}
+
+.notifications-content,
+.searchbox-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.searchbar {
+    border-bottom: 1px solid #0a0a0c;
+    border-radius: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.85rem 1rem 0.85rem;
+}
+
+.searchbar input[type="text"] {
+    outline: none;
+    border: 0;
+    background: transparent;
+    margin-right: auto;
+    color: #ecf1f0;
+    width: 100%;
+}
+
+#search-btn {
+    border: 0;
+    background-color: transparent;
+    color: #ecf1f0;
+    cursor: pointer;
+}
+
+.is-hidden {
+    visibility: hidden;
+    display: none;
+}
+
+.recent-search-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.875rem;
+}
+
+.recent-search-item {
+    background-color: #0a0a0c;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    color: #ecf1f0;
+    font-size: 0.85rem;
 }
