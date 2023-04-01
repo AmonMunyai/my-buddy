@@ -84,13 +84,8 @@
     border: 0;
 }
 
-.ask-buddy .profile-pic img {
-    border-radius: 25%;
-}
-
 .ask-buddy .profile-pic {
-    transform: scale(0.8);
-    border-radius: 25%;
+    transform: scale(0.75);
 }
 
 /* post */
@@ -117,11 +112,12 @@
     display: flex;
     gap: 0.5rem;
     align-items: center;
+    font-size: 0.625rem;
 }
 
 .post-tag {
     background-color: hsl(0, 0%, 100%, 0.1);
-    padding: 0.4rem;
+    padding: 0.35rem;
     border-radius: 0.25rem;
 }
 
@@ -132,14 +128,10 @@
     align-items: center;
 }
 
-.post-content-stats {
-    margin-right: 2rem;
-}
-
 .user-card-profile-pic {
-    width: 2rem;
-    height: 2rem;
-    border-radius: 25%;
+    width: 1.25rem;
+    height: 1.25rem;
+    border-radius: 0.125rem;
     background-color: red; /* will be replaced by profile pic */
     filter: saturate(0%);
     margin-right: 0.5rem;
@@ -149,7 +141,7 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 25%;
+    border-radius: 0.125rem;
 }
 
 /* left side navigation bar */
@@ -213,9 +205,9 @@
 }
 
 .recent-search-item {
-    background-color: #0a0a0c;
+    background-color: #f26522;
     border-radius: 0.5rem;
-    padding: 0.5rem;
+    padding: 0.5rem 0.5rem 0.25rem;
     color: #ecf1f0;
-    font-size: 0.85rem;
+    font-size: 0.8rem;
 }

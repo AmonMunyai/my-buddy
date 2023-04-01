@@ -52,7 +52,7 @@ a:hover {
 }
 
 .navbar_logo:hover {
-    transform: scale(1.5);
+    transform: scale(1.125);
 }
 
 .navbar_links {
