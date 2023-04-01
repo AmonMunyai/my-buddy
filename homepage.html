@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | myBuddy</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/homepage.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <!-- navigation bar -->
+    <header>
+        <nav class="navbar">
+            <a href="#" class="navbar_logo-link text-color-white">
+                <h1 class="navbar_logo">my<span class="text-color-uj">Buddy</span></h1>
+            </a>
+            <ul class="navbar_links">
+                <li><a href="blog.html" class="navbar_link">Blog</a></li>
+                <li><a href="#" class="navbar_link">Docs</a></li>
+                <li><a href="#" class="navbar_link">Developers</a></li>
+            </ul>
+            <div class="navbar_buttons">
+                <!-- <a href="#" id="ask-a-buddy-btn" class="button" onclick="toggleModal('login')">Ask a Buddy</a> -->
+                <a href="#" id="search-btn" class="button" onclick="toggleModal('search')">Search</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- main content -->
+    <main class="main-wrapper">
+        <section class="section_home">
+            <div class="padding-global">
+                <div class="container">
+                    <!-- left sidebar navigation -->
+                    <nav class="sidebar_left">
+                        <div class="profile text-align-center">
+                            <a href="#" class="profile-link">
+                                <div class="profile-pic">
+                                    <img src="https://images.unsplash.com/photo-1529665253569-6d01c0eaf7b6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8cHJvZmlsZXxlbnwwfHwwfHw%3D&w=1000&q=80" loading="lazy" alt>
+                                </div>
+                                <div class="profile-name">
+                                    <h4>John Doe</h4>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="line-divider"></div>
+                        <div class="sidebar_left-links">
+                            <ul>
+                                <li><a href="#" class="sidebar-link"><i class="fa fa-home"></i>Home</a></li>
+                                <li><a href="#" class="sidebar-link"><i class="fa fa-compass"></i>Explore</a></li>
+                                <li><a href="#" class="sidebar-link"><i class="fa fa-bell"></i>Notifications</a></li>
+                                <li><a href="#" class="sidebar-link"><i class="fa fa-users"></i>Communities</a></li>
+                            </ul>
+                        </div>
+                    </nav>
+
+                    <!-- main content, posts and feed -->
+                    <div class="content">
+                        <div class="spacing-block padding-small"></div>
+                        <form action="#" class="ask-buddy">
+                            <div class="profile-pic">
+                                <img src="https://images.unsplash.com/photo-1529665253569-6d01c0eaf7b6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8cHJvZmlsZXxlbnwwfHwwfHw%3D&w=1000&q=80" loading="lazy" alt>
+                            </div>
+                            <input type="text" placeholder="Ask a Buddy?">
+                            <input class="button" type="submit" value="Ask">
+                        </form>
+                        <div class="spacing-block padding-medium"></div>
+                        <ul class="posts">
+                            <li class="post">
+                                <div class="post-content">
+                                    <div class="post-content-header">
+                                        <div class="user-card">
+                                            <div class="user-card-profile-pic">
+                                                <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png" loading="lazy" alt>
+                                            </div>
+                                            <div class="user-card-info">
+                                                <div class="user-card-link">
+                                                    <h3 class="text-weight-bold"><a href="#" class="text-color-uj">Lorem Ipsum</a></h3>
+                                                </div>
+                                            </div>
+                                            <time class="user-card-time">
+                                                asked
+                                                <span title="2023-04-01 12:01:56Z" class="relative-time">47 secs ago</span>
+                                            </time>
+                                        </div>
+                                    </div>
+                                    <div class="spacing-block padding-small"></div>
+                                    <div class="post-content-body">
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia excepturi nihil error repellendus eius, blanditiis sit nesciunt odit voluptatibus, dignissimos deleniti fugit vel in, architecto id nisi eligendi atque. Dignissimos.</p>
+                                    </div>
+                                    <div class="spacing-block padding-small"></div>
+                                    <div class="post-content-footer">
+                                        <ul class="post-content-tags">
+                                            <li><a href="#" class="post-tag">lorem</a></li>
+                                            <li><a href="#" class="post-tag">ipsum</a></li>
+                                            <li><a href="#" class="post-tag">dolor</a></li>
+                                        </ul>
+                                        <div class="post-content-stats text-color-uj">
+                                            <span class="post-content-stats-item-number">6</span>
+                                            <span class="post-content-stats-item-unit">replies</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="post">
+                                <div class="post-content">
+                                    <div class="post-content-header">
+                                        <div class="user-card">
+                                            <div class="user-card-profile-pic">
+                                                <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png" loading="lazy" alt>
+                                            </div>
+                                            <div class="user-card-info">
+                                                <div class="user-card-link">
+                                                    <h3 class="text-weight-bold"><a href="#" class="text-color-uj">Lorem Ipsum</a></h3>
+                                                </div>
+                                            </div>
+                                            <time class="user-card-time">
+                                                asked
+                                                <span title="2023-04-01 12:01:56Z" class="relative-time">23 hours ago</span>
+                                            </time>
+                                        </div>
+                                    </div>
+                                    <div class="spacing-block padding-small"></div>
+                                    <div class="post-content-body">
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia excepturi nihil error repellendus eius, blanditiis sit nesciunt odit voluptatibus, dignissimos deleniti fugit vel in, architecto id nisi eligendi atque. Dignissimos.</p>
+                                    </div>
+                                    <div class="spacing-block padding-small"></div>
+                                    <div class="post-content-footer">
+                                        <ul class="post-content-tags">
+                                            <li><a href="#" class="post-tag">lorem</a></li>
+                                            <li><a href="#" class="post-tag">ipsum</a></li>
+                                            <li><a href="#" class="post-tag">dolor</a></li>
+                                        </ul>
+                                        <div class="post-content-stats text-color-uj">
+                                            <span class="post-content-stats-item-number">28</span>
+                                            <span class="post-content-stats-item-unit">replies</span>
+                                        </div>
+                                    </div>    
+                                </div>
+                            </li>
+                            <li class="post">
+                                <div class="post-content">
+                                    <div class="post-content-header">
+                                        <div class="user-card">
+                                            <div class="user-card-profile-pic">
+                                                <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png" loading="lazy" alt>
+                                            </div>
+                                            <div class="user-card-info">
+                                                <div class="user-card-link">
+                                                    <h3 class="text-weight-bold"><a href="#" class="text-color-uj">Lorem Ipsum</a></h3>
+                                                </div>
+                                            </div>
+                                            <time class="user-card-time">
+                                                asked
+                                                <span title="2023-04-01 12:01:56Z" class="relative-time">2 days ago</span>
+                                            </time>
+                                        </div>
+                                    </div>
+                                    <div class="spacing-block padding-small"></div>
+                                    <div class="post-content-body">
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia excepturi nihil error repellendus eius, blanditiis sit nesciunt odit voluptatibus, dignissimos deleniti fugit vel in, architecto id nisi eligendi atque. Dignissimos.</p>
+                                    </div>
+                                    <div class="spacing-block padding-small"></div>
+                                    <div class="post-content-footer">
+                                        <ul class="post-content-tags">
+                                            <li><a href="#" class="post-tag">lorem</a></li>
+                                            <li><a href="#" class="post-tag">ipsum</a></li>
+                                            <li><a href="#" class="post-tag">dolor</a></li>
+                                        </ul>
+                                        <div class="post-content-stats text-color-uj">
+                                            <span class="post-content-stats-item-number">13</span>
+                                            <span class="post-content-stats-item-unit">replies</span>
+                                        </div>
+                                    </div>    
+                                </div>
+                            </li>
+                            <li class="post">
+                                <div class="post-content">
+                                    <div class="post-content-header">
+                                        <div class="user-card">
+                                            <div class="user-card-profile-pic">
+                                                <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png" loading="lazy" alt>
+                                            </div>
+                                            <div class="user-card-info">
+                                                <div class="user-card-link">
+                                                    <h3 class="text-weight-bold"><a href="#" class="text-color-uj">Lorem Ipsum</a></h3>
+                                                </div>
+                                            </div>
+                                            <time class="user-card-time">
+                                                asked
+                                                <span title="2023-04-01 12:01:56Z" class="relative-time">2 days ago</span>
+                                            </time>
+                                        </div>
+                                    </div>
+                                    <div class="spacing-block padding-small"></div>
+                                    <div class="post-content-body">
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia excepturi nihil error repellendus eius, blanditiis sit nesciunt odit voluptatibus, dignissimos deleniti fugit vel in, architecto id nisi eligendi atque. Dignissimos.</p>
+                                    </div>
+                                    <div class="spacing-block padding-small"></div>
+                                    <div class="post-content-footer">
+                                        <ul class="post-content-tags">
+                                            <li><a href="#" class="post-tag">lorem</a></li>
+                                            <li><a href="#" class="post-tag">ipsum</a></li>
+                                            <li><a href="#" class="post-tag">dolor</a></li>
+                                        </ul>
+                                        <div class="post-content-stats text-color-uj">
+                                            <span class="post-content-stats-item-number">20</span>
+                                            <span class="post-content-stats-item-unit">replies</span>
+                                        </div>
+                                    </div>    
+                                </div>
+                            </li>
+                            <li class="post">
+                                <div class="post-content">
+                                    <div class="post-content-header">
+                                        <div class="user-card">
+                                            <div class="user-card-profile-pic">
+                                                <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png" loading="lazy" alt>
+                                            </div>
+                                            <div class="user-card-info">
+                                                <div class="user-card-link">
+                                                    <h3 class="text-weight-bold"><a href="#" class="text-color-uj">Lorem Ipsum</a></h3>
+                                                </div>
+                                            </div>
+                                            <time class="user-card-time">
+                                                asked
+                                                <span title="2023-04-01 12:01:56Z" class="relative-time">3 days ago</span>
+                                            </time>
+                                        </div>
+                                    </div>
+                                    <div class="spacing-block padding-small"></div>
+                                    <div class="post-content-body">
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia excepturi nihil error repellendus eius, blanditiis sit nesciunt odit voluptatibus, dignissimos deleniti fugit vel in, architecto id nisi eligendi atque. Dignissimos.</p>
+                                    </div>
+                                    <div class="spacing-block padding-small"></div>
+                                    <div class="post-content-footer">
+                                        <ul class="post-content-tags">
+                                            <li><a href="#" class="post-tag">lorem</a></li>
+                                            <li><a href="#" class="post-tag">ipsum</a></li>
+                                            <li><a href="#" class="post-tag">dolor</a></li>
+                                        </ul>
+                                        <div class="post-content-stats text-color-uj">
+                                            <span class="post-content-stats-item-number">18</span>
+                                            <span class="post-content-stats-item-unit">replies</span>
+                                        </div>
+                                    </div>    
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.</div>         
+                </div>
+                
+            </div>
+        </section>
+    </main>
+
+    <!-- javascript -->
+    <script src="js/script.js" defer></script>
+</body>
+</html>
