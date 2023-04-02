@@ -274,8 +274,8 @@
                                 <div class="searchbox-header">
                                     <h3>Search</h3>
                                     <div class="searchbar">
-                                        <input type="text" placeholder="Search..">
-                                        <button id="search-btn"><i class="fa fa-search"></i></button>
+                                        <input id="search-input" type="text" placeholder="Search..">
+                                        <button id="search-btn" onclick="addSearch()"><i class="fa fa-search"></i></button>
                                     </div>    
                                 </div>
                                 <div class="line-separator-wrapper">
@@ -284,12 +284,9 @@
                                     <div class="line-divider"></div>
                                 </div>
                                 <div class="searchbox-body">
-                                    <div class="text-size-xsmall text-align-center is-hidden">No recent searches.</div>
-                                    <ul class="recent-search-list">
-                                        <li><a href="#" class="recent-search-item">Lorem ipsum dolor sit amet.</a></li>
-                                        <li><a href="#" class="recent-search-item">Lorem sit amet.</a></li>
-                                        <li><a href="#" class="recent-search-item">Ipsum dolor amet.</a></li>
-                                    </ul>
+                                    <div id="recent-search-status" class="text-size-xsmall text-align-center">No recent searches.</div>
+                                    <ul class="recent-search-list"></ul>
+                                    <button id="clear-search-btn" class="underline text-size-xsmall is-hidden" onclick="clearSearchHistory()">clear all</button>
                                 </div>
                             </div>    
                         </div>

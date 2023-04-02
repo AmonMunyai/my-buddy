@@ -17,37 +17,40 @@ function toggleModal(modalName) {
 }
 
 const tagList = document.querySelector(".tags");
-const input = document.getElementById("tag-input");
+const inputTag = document.getElementById("tag-input");
 
 // Function for outputing the tags
 function addTag() {
-    // Check if input is empty
-    if (input.value == "") {
+    // Check if inputTag is empty
+    if (inputTag.value == "") {
         return
     }
 
     // Remove whitespace
-    input.value = input.value.replace(/\s/g, '');
+    inputTag.value = inputTag.value.replace(/\s/g, '');
+
+    // Change to lowercase
+    inputTag.value = inputTag.value.toLowerCase();
 
     // Limit the amount of tags to 5
     if (tagList.children.length >= 4) {
-        // Disable input
-        input.disabled = true;
+        // Disable inputTag
+        inputTag.disabled = true;
 
         // Change placeholder text
-        input.placeholder = "Max number of tags reached!";
+        inputTag.placeholder = "Max number of tags reached!";
     }
 
-    // Create tag element, and insert the input value
+    // Create tag element, and insert the inputTag value
     const newTag = `
-        <li class="tag">${input.value}<i class="fa fa-close remove-tag-btn"></i></li>
+        <li class="tag">${inputTag.value}<i class="fa fa-close remove-tag-btn"></i></li>
     `;
 
     // Output the tag
     tagList.innerHTML += newTag;
 
-    // Clear the input field
-    input.value = "";
+    // Clear the inputTag field
+    inputTag.value = "";
 
     return tagList;
 }
@@ -56,10 +59,45 @@ function addTag() {
 window.addEventListener('click', element => {
     if (element.target.classList.contains('remove-tag-btn')) {
         element.target.parentElement.remove();
-        // Enable input
-        input.disabled = false;
+        // Enable inputTag
+        inputTag.disabled = false;
 
         // Change placeholder text
-        input.placeholder = "Add a tag";
+        inputTag.placeholder = "Add a tag";
     }
 })
+
+const searchHistory = document.querySelector(".recent-search-list");
+const inputSearch = document.getElementById("search-input");
+const recentSearchStatus = document.getElementById('recent-search-status');
+const clearSearchBtn = document.getElementById('clear-search-btn');
+
+// Function for outputing search history
+function addSearch() {
+    // Check if inputSearch is empty
+    if (inputSearch.value == "") {
+        return
+    }
+
+    clearSearchBtn.classList.remove('is-hidden');
+    recentSearchStatus.classList.add('is-hidden');
+
+    // Create recent-search-item, and insert the inputSearch value
+    const newSearch = `
+        <li><a href="#" class="recent-search-item">${inputSearch.value}</a></li>
+    `;
+
+    // Output the search
+    searchHistory.innerHTML += newSearch;
+
+    // Clear the inputSearch field
+    inputSearch.value = "";
+
+    return searchHistory;
+}
+
+function clearSearchHistory() {
+    searchHistory.innerHTML = "";
+    recentSearchStatus.classList.remove('is-hidden');
+    clearSearchBtn.classList.add('is-hidden');
+}
