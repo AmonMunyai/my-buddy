@@ -248,6 +248,12 @@ footer {
     padding-bottom: 2rem;
 }
 
+.footer_legal-list li {
+    display: inline-block;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
 /* section header */
 
 .header_viewport-80 {
