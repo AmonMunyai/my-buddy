@@ -321,7 +321,6 @@ footer {
     left: 0;
     width: 100%;
     height: 100%;
-    backdrop-filter: blur(10px);
     justify-content: center;
     align-items: center;
     display: flex;
@@ -339,8 +338,6 @@ footer {
 .modal-dialog {
     width: 20rem;
     max-width: 100%;
-    border-radius: 0.5rem;
-    backdrop-filter: blur(50px);
 }
 
 .modal-content {
@@ -349,7 +346,8 @@ footer {
     padding: 2rem 1.5rem 1.5rem;
     transform: scale(0);
     transition: transform 400ms;
-
+    background-color: #222326;
+    border-radius: 0.5rem;
 }
 
 .close-icon {
