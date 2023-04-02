@@ -336,7 +336,7 @@ footer {
 }
 
 .modal-dialog {
-    width: 20rem;
+    width: 22.5rem;
     max-width: 100%;
 }
 
@@ -346,7 +346,7 @@ footer {
     padding: 2rem 1.5rem 1.5rem;
     transform: scale(0);
     transition: transform 400ms;
-    background-color: #222326;
+    background-color: #0a0a0c;
     border-radius: 0.5rem;
 }
 
@@ -383,7 +383,7 @@ footer {
     border-radius: 0.25rem;
 }
 
-.form-input > input {
+.form-input input {
     width: 100%;
     color: #ecf1f0;
     background-color: transparent;
