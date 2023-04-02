@@ -3,7 +3,7 @@
 
 .container {
     display: grid;
-    grid-template-columns: 18vh auto 20vw;
+    grid-template-columns: 18vh auto 5rem;
     column-gap: 2rem;
     position: relative;
     margin-top: 2.5rem;
@@ -159,30 +159,9 @@
     width: 100%;
 }
 
-#search-btn {
-    border: 0;
-    background-color: transparent;
-    color: #ecf1f0;
-    cursor: pointer;
-}
-
 .is-hidden {
     visibility: hidden;
     display: none;
-}
-
-.recent-search-list {
-    display: flex;
-    flex-direction: column;
-    gap: 0.875rem;
-}
-
-.recent-search-item {
-    background-color: #f26522;
-    border-radius: 0.25rem;
-    padding: 0.5rem 0.5rem 0.25rem;
-    color: #ecf1f0;
-    font-size: 0.8rem;
 }
 
 #modal-create-post .modal-header input[type="text"] {

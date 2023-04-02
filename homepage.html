@@ -47,8 +47,9 @@
                         <div class="sidebar_left-links text-size-small">
                             <ul>
                                 <li><a href="#" class="sidebar-link"><i class="fa fa-home"></i>Home</a></li>
+                                <li><a href="#" class="sidebar-link" onclick="toggleModal('search')"><i class="fa fa-search"></i>Search </a></li>
                                 <!-- <li><a href="#" class="sidebar-link"><i class="fa fa-compass"></i>Explore</a></li> -->
-                                <li><a href="#" class="sidebar-link is-hidden"><i class="fa fa-bell"></i>Notifications</a></li>
+                                <li><a href="#" class="sidebar-link"><i class="fa fa-bell"></i>Notifications</a></li>
                                 <!-- <li><a href="#" class="sidebar-link"><i class="fa fa-tag"></i>Tags</a></li> -->
                                 <li><a href="#" class="sidebar-link"><i class="fa fa-users"></i>Communities</a></li>
                                 <li><a href="#" class="sidebar-link" onclick="toggleModal('create-post')"><i class="fa fa-question"></i>Ask a Buddy?</a></li>
@@ -268,29 +269,7 @@
                     </div>
 
                     <!-- right side navigation bar -->
-                    <div class="sidebar_right">
-                        <div class="sidebar_right-content">
-                            <div class="searchbox-content">
-                                <div class="searchbox-header">
-                                    <h3>Search</h3>
-                                    <div class="searchbar">
-                                        <input id="search-input" type="text" placeholder="Search..">
-                                        <button id="search-btn" onclick="addSearch()"><i class="fa fa-search"></i></button>
-                                    </div>    
-                                </div>
-                                <div class="line-separator-wrapper">
-                                    <div class="line-divider"></div>
-                                    <h5 class="line-separator">Recents</h5>
-                                    <div class="line-divider"></div>
-                                </div>
-                                <div class="searchbox-body">
-                                    <div id="recent-search-status" class="text-size-xsmall text-align-center">No recent searches.</div>
-                                    <ul class="recent-search-list"></ul>
-                                    <button id="clear-search-btn" class="underline text-size-xsmall is-hidden" onclick="clearSearchHistory()">clear all</button>
-                                </div>
-                            </div>    
-                        </div>
-                        <div class="spacing-block padding-medium"></div>
+                    <!-- <div class="sidebar_right">
                         <div class="sidebar_right-content">
                             <div class="notifications-content">
                                 <div class="notifications-header">
@@ -302,7 +281,7 @@
                                 </div>
                             </div>    
                         </div>
-                    </div>
+                    </div> -->
                 </div>
                 
             </div>
@@ -346,6 +325,48 @@
                 <div class="modal-footer text-size-small text-align-center">
                     <input type="checkbox" name="" id="">
                     <p for="">send new responses to post via email?</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- modal search -->
+    <div class="modal" id="modal-search">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <button id="close-btn" class="close-icon" onclick="toggleModal('close')">+</button>
+                <div class="modal-header">
+                    <h1 class="modal-title text-align-center">Search</h1>
+                </div>
+                <div class="spacing-block padding-small"></div>
+                <div class="line-divider"></div>
+                <div class="modal-body">
+                    <form action="#" name="searchForm" onsubmit="addSearch()">
+                        <div class="form-group form-input-wrapper">
+                            <div class="form-input">
+                                <input name="searchInput" type="text" placeholder="Search..">
+                            </div>
+                            <div class="line-divider"></div>
+                            <div class="form-input">
+                            </div>
+                        </div>
+                        <div class="form-group recent-search">
+                            <div class="line-separator-wrapper">
+                                <div class="line-divider"></div>
+                                <h5 class="line-separator">Recents</h5>
+                                <div class="line-divider"></div>
+                            </div>
+                            <div class="spacing-block padding-small"></div>
+                            <div id="recent-status" class="text-size-xsmall text-align-center">No recent searches.</div>
+                            <ul class="recent-list"></ul>
+                            <button name="clearBtn" id="clear-search-btn" class="underline text-size-xsmall is-hidden" onclick="clearSearchHistory()">clear all</button>    
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" id="search-btn" class="button-submit">Search</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer text-size-small text-align-center">
                 </div>
             </div>
         </div>

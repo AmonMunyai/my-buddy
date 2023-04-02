@@ -67,24 +67,26 @@ window.addEventListener('click', element => {
     }
 })
 
-const searchHistory = document.querySelector(".recent-search-list");
-const inputSearch = document.getElementById("search-input");
-const recentSearchStatus = document.getElementById('recent-search-status');
-const clearSearchBtn = document.getElementById('clear-search-btn');
+const searchHistory = document.querySelector(".recent-list");
+const recentStatus = document.getElementById('recent-status');
+const clearSearchBtn = document.forms['searchForm']['clearBtn'];
+
 
 // Function for outputing search history
 function addSearch() {
+    const inputSearch = document.forms['searchForm']['searchInput'];
+
     // Check if inputSearch is empty
     if (inputSearch.value == "") {
         return
     }
 
     clearSearchBtn.classList.remove('is-hidden');
-    recentSearchStatus.classList.add('is-hidden');
+    recentStatus.classList.add('is-hidden');
 
     // Create recent-search-item, and insert the inputSearch value
     const newSearch = `
-        <li><a href="#" class="recent-search-item">${inputSearch.value}</a></li>
+        <li></i><a href="#" class="recent-item">${inputSearch.value}</a></li>
     `;
 
     // Output the search
@@ -98,6 +100,6 @@ function addSearch() {
 
 function clearSearchHistory() {
     searchHistory.innerHTML = "";
-    recentSearchStatus.classList.remove('is-hidden');
+    recentStatus.classList.remove('is-hidden');
     clearSearchBtn.classList.add('is-hidden');
 }
