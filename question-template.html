@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question title name - myBuddy</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/homepage.css">
+    <link rel="stylesheet" href="css/question.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <!-- navigation bar -->
+    <header>
+        <nav class="navbar">
+            <a href="#" class="navbar_logo-link text-color-white">
+                <h1 class="navbar_logo">my<span class="text-color-uj">Buddy</span></h1>
+            </a>
+            <ul class="navbar_links">
+                <li><a href="blog.html" class="navbar_link">Blog</a></li>
+                <li><a href="#" class="navbar_link">Docs</a></li>
+                <li><a href="#" class="navbar_link">Developers</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- main content -->
+    <main class="main-wrapper">
+        <section class="section_home">
+            <div class="padding-global">
+                <div class="container">
+                    <!-- left side navigation bar -->
+                    <nav class="sidebar_left">
+                        <div class="profile text-align-center">
+                            <a href="#" class="profile-link">
+                                <div class="profile-pic">
+                                    <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png" loading="lazy" alt>
+                                </div>
+                                <div class="spacing-block padding-small"></div>
+                                <div class="profile-name">
+                                    <h4>John Doe</h4>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="line-divider"></div>
+                        <div class="sidebar_left-links text-size-small">
+                            <ul>
+                                <li><a href="#" class="sidebar-link"><i class="fa fa-home"></i>Home</a></li>
+                                <!-- <li><a href="#" class="sidebar-link"><i class="fa fa-compass"></i>Explore</a></li> -->
+                                <li><a href="#" class="sidebar-link is-hidden"><i class="fa fa-bell"></i>Notifications</a></li>
+                                <!-- <li><a href="#" class="sidebar-link"><i class="fa fa-tag"></i>Tags</a></li> -->
+                                <li><a href="#" class="sidebar-link"><i class="fa fa-users"></i>Communities</a></li>
+                                <li><a href="#" class="sidebar-link" onclick="toggleModal('create-post')"><i class="fa fa-question"></i>Ask a Buddy?</a></li>
+                            </ul>
+                        </div>
+                    </nav>
+
+                    <!-- main content, posts and feed -->
+                    <div class="content">
+                        <div class="question">
+                            <div class="question-content">
+                                <div class="question-content-header">
+                                    <div class="question-content-title">
+                                        <h3 class="text-color-white heading-style-h3">Lorem ipsum dolor sit amet.</h3>
+                                    </div>
+                                    <div class="spacing-block padding-xsmall"></div>
+                                    <div class="line-divider"></div>
+                                </div>
+                                <div class="spacing-block padding-small"></div>
+                                <div class="question-content-body">
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia excepturi nihil error repellendus eius, blanditiis sit nesciunt odit voluptatibus, dignissimos deleniti fugit vel in, architecto id nisi eligendi atque. Dignissimos.</p>
+                                </div>
+                                <div class="spacing-block padding-small"></div>
+                                <div class="question-content-footer">
+                                    <ul class="question-content-tags">
+                                        <li><a href="#" class="post-tag">lorem</a></li>
+                                        <li><a href="#" class="post-tag">ipsum</a></li>
+                                        <li><a href="#" class="post-tag">dolor</a></li>
+                                    </ul>
+                                    <div class="user-card">
+                                        <div class="user-card-info">
+                                            <div class="user-card-link">
+                                                <h3 class="text-weight-bold"><a href="#" class="text-color-uj">Lorem Ipsum</a></h3>
+                                            </div>
+                                        </div>
+                                        <time class="user-card-time">
+                                            Asked
+                                            <span class="relative-time text-color-uj">47 secs ago</span>
+                                        </time>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="spacing-block padding-medium"></div>
+                        <div class="line-separator-wrapper">
+                            <div class="line-divider"></div>
+                            <h4 class="line-separator">Answers</h4>
+                            <div class="line-divider"></div>
+                        </div>
+                        <div class="spacing-block padding-medium"></div>
+                        <ul class="answers">
+                            <li class="answer">
+                                <div class="answer-content">
+                                    <div class="answer-content-header">
+                                    </div>
+                                    <div class="spacing-block padding-small"></div>
+                                    <div class="answer-content-body">
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia excepturi nihil error repellendus eius, blanditiis sit nesciunt odit voluptatibus, dignissimos deleniti fugit vel in, architecto id nisi eligendi atque. Dignissimos.</p>
+                                    </div>
+                                    <div class="spacing-block padding-small"></div>
+                                    <div class="answer-content-footer">
+                                        <div class="user-card">
+                                            <div class="user-card-profile-pic">
+                                                <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png" loading="lazy" alt>
+                                            </div>
+                                            <div class="user-card-info">
+                                                <div class="user-card-link">
+                                                    <h4 class="text-weight-bold"><a href="#" class="text-color-uj">Lorem Ipsum</a></h4>
+                                                </div>
+                                            </div>
+                                            answered
+                                            <time class="user-card-time text-muted">
+                                                <span class="absolute-date">Mar 28, 2023</span> at <span class="absolute-time">12:22</span>
+                                            </time>
+                                        </div>
+                                        <button id="voting-btn" class="fa fa-thumbs-up button-submit"><span class="answer-score">25</span></button>
+                                        <button id="add-comment-btn" class="button is-small">Add a comment</button>
+                                    </div>
+                                    <div class="spacing-block padding-small"></div>
+                                    <div class="line-divider"></div>
+                                    <ul class="answer-content-comments text-size-xsmall">
+                                        <li class="answer-comment">
+                                            <div class="comment-vote">
+                                                <button id="upvote-btn"><i class="fa fa-arrow-up"></i></button>
+                                                <span class="comment-score">6</span>
+                                                <button id="downvote-btn"><i class="fa fa-arrow-down"></i></button>
+                                            </div>
+                                            <div class="comment-text">
+                                                <div class="comment-copy">
+                                                    <span>Lorem ipsum dolor sit amet.</span>
+                                                </div>  
+                                                &bullet;
+                                                <a href="#" class="comment-user text-color-uj">Lorem Ipsum</a>
+                                                <div class="comment-date text-muted">
+                                                    <span class="absolute-date">Mar 28, 2023</span> at <span class="absolute-time">12:22</span>
+                                                </div>    
+                                            </div>
+                                        </li>
+                                        <li class="answer-comment">
+                                            <div class="comment-vote">
+                                                <button id="upvote-btn"><i class="fa fa-arrow-up"></i></button>
+                                                <span class="comment-score">2</span>
+                                                <button id="downvote-btn"><i class="fa fa-arrow-down"></i></button>
+                                            </div>
+                                            <div class="comment-text">
+                                                <div class="comment-copy">
+                                                    <span>Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>
+                                                </div>  
+                                                &bullet;
+                                                <a href="#" class="comment-user text-color-uj">Lorem Ipsum</a>
+                                                <div class="comment-date text-muted">
+                                                    <span class="absolute-date">Feb 12, 2023</span> at <span class="absolute-time">10:12</span>
+                                                </div>    
+                                            </div>
+                                        </li>
+                                        <li class="answer-comment">
+                                            <div class="comment-vote">
+                                                <button id="upvote-btn"><i class="fa fa-arrow-up"></i></button>
+                                                <span class="comment-score">0</span>
+                                                <button id="downvote-btn"><i class="fa fa-arrow-down"></i></button>
+                                            </div>
+                                            <div class="comment-text">
+                                                <div class="comment-copy">
+                                                    <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo delectus corporis quasi dolor nisi velit! Beatae dolorem atque magni quae.</span>
+                                                </div>  
+                                                &bullet;
+                                                <a href="#" class="comment-user text-color-uj">Lorem Ipsum</a>
+                                                <div class="comment-date text-muted">
+                                                    <span class="absolute-date">Feb 12, 2023</span> at <span class="absolute-time">10:12</span>
+                                                </div>    
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="answer">
+                                <div class="answer-content">
+                                    <div class="answer-content-header">
+                                    </div>
+                                    <div class="spacing-block padding-small"></div>
+                                    <div class="answer-content-body">
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis in voluptate aliquid!</p>
+                                    </div>
+                                    <div class="spacing-block padding-small"></div>
+                                    <div class="answer-content-footer">
+                                        <div class="user-card">
+                                            <div class="user-card-profile-pic">
+                                                <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png" loading="lazy" alt>
+                                            </div>
+                                            <div class="user-card-info">
+                                                <div class="user-card-link">
+                                                    <h4 class="text-weight-bold"><a href="#" class="text-color-uj">Lorem Ipsum</a></h4>
+                                                </div>
+                                            </div>
+                                            answered
+                                            <time class="user-card-time text-muted">
+                                                <span class="absolute-date">Mar 28, 2023</span> at <span class="absolute-time">12:22</span>
+                                            </time>
+                                        </div>
+                                        <button id="voting-btn" class="fa fa-thumbs-up button-submit"><span class="answer-score">12</span></button>
+                                        <button id="add-comment-btn" class="button is-small">Add a comment</button>
+                                    </div>
+                                    <div class="spacing-block padding-small"></div>
+                                    <div class="line-divider"></div>
+                                    <ul class="answer-content-comments text-size-xsmall">
+                                        <li class="answer-comment">
+                                            <div class="comment-vote">
+                                                <button id="upvote-btn"><i class="fa fa-arrow-up"></i></button>
+                                                <span class="comment-score">8</span>
+                                                <button id="downvote-btn"><i class="fa fa-arrow-down"></i></button>
+                                            </div>
+                                            <div class="comment-text">
+                                                <div class="comment-copy">
+                                                    <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum quas alias impedit.</span>
+                                                </div>  
+                                                &bullet;
+                                                <a href="#" class="comment-user text-color-uj">Lorem Ipsum</a>
+                                                <div class="comment-date text-muted">
+                                                    <span class="absolute-date">Mar 28, 2023</span> at <span class="absolute-time">12:22</span>
+                                                </div>    
+                                            </div>
+                                        </li>
+                                        <li class="answer-comment">
+                                            <div class="comment-vote">
+                                                <button id="upvote-btn"><i class="fa fa-arrow-up"></i></button>
+                                                <span class="comment-score">0</span>
+                                                <button id="downvote-btn"><i class="fa fa-arrow-down"></i></button>
+                                            </div>
+                                            <div class="comment-text">
+                                                <div class="comment-copy">
+                                                    <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo delectus corporis quasi dolor nisi velit! Beatae dolorem atque magni quae.</span>
+                                                </div>  
+                                                &bullet;
+                                                <a href="#" class="comment-user text-color-uj">Lorem Ipsum</a>
+                                                <div class="comment-date text-muted">
+                                                    <span class="absolute-date">Feb 12, 2023</span> at <span class="absolute-time">10:12</span>
+                                                </div>    
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="answer">
+                                <div class="answer-content">
+                                    <div class="answer-content-header">
+                                    </div>
+                                    <div class="spacing-block padding-small"></div>
+                                    <div class="answer-content-body">
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus soluta ab veniam nam possimus provident vel! Error, unde natus laboriosam sunt labore facilis totam amet! Totam consequatur autem eum soluta. Dignissimos mollitia, itaque harum neque temporibus doloremque, eligendi quibusdam nam beatae at voluptatem ad, similique sunt? Tempore sed provident pariatur, officiis dolor impedit. Nulla laudantium distinctio enim vero, minima quibusdam ad consequuntur, a autem maiores incidunt rem obcaecati ea ipsum iure veniam exercitationem fugiat error quaerat? Saepe mollitia incidunt sit in ipsam delectus aut totam veniam accusantium eius harum pariatur animi ratione ducimus unde nobis obcaecati culpa illo architecto rerum consequuntur, quasi eveniet necessitatibus iure! Ipsam autem recusandae velit sint exercitationem soluta dolorem esse rerum accusantium labore laborum omnis, nisi ipsa quia nesciunt culpa ut architecto earum possimus facilis dolor at eligendi officiis. Porro veniam vero ab iste, sequi provident, sint dolorem excepturi non rem quo blanditiis odit atque quod! Eligendi non dolore aperiam odit debitis, beatae dolorem atque voluptate iure, ex amet earum libero consectetur ipsum eos cumque natus, illum tempore et distinctio repudiandae harum? Rem, doloremque. Ratione nostrum, ut deserunt eligendi labore quaerat dolorem dicta praesentium! Excepturi, corrupti eveniet iure ducimus illum totam ut nulla laboriosam tempore doloribus!</p>
+                                    </div>
+                                    <div class="spacing-block padding-small"></div>
+                                    <div class="answer-content-footer">
+                                        <div class="user-card">
+                                            <div class="user-card-profile-pic">
+                                                <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png" loading="lazy" alt>
+                                            </div>
+                                            <div class="user-card-info">
+                                                <div class="user-card-link">
+                                                    <h4 class="text-weight-bold"><a href="#" class="text-color-uj">Lorem Ipsum</a></h4>
+                                                </div>
+                                            </div>
+                                            answered
+                                            <time class="user-card-time text-muted">
+                                                <span class="absolute-date">Mar 28, 2023</span> at <span class="absolute-time">12:22</span>
+                                            </time>
+                                        </div>
+                                        <button id="voting-btn" class="fa fa-thumbs-up button-submit"><span class="answer-score">4</span></button>
+                                        <button id="add-comment-btn" class="button is-small">Add a comment</button>
+                                    </div>
+                                    <div class="spacing-block padding-small"></div>
+                                    <div class="line-divider"></div>
+                                    <ul class="answer-content-comments text-size-xsmall">
+                                        <li class="answer-comment">
+                                            <div class="comment-vote">
+                                                <button id="upvote-btn"><i class="fa fa-arrow-up"></i></button>
+                                                <span class="comment-score">27</span>
+                                                <button id="downvote-btn"><i class="fa fa-arrow-down"></i></button>
+                                            </div>
+                                            <div class="comment-text">
+                                                <div class="comment-copy">
+                                                    <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem, a rem deserunt voluptas nemo quas, error fugit nam eius asperiores eum atque quisquam nulla soluta.</span>
+                                                </div>  
+                                                &bullet;
+                                                <a href="#" class="comment-user text-color-uj">Lorem Ipsum</a>
+                                                <div class="comment-date text-muted">
+                                                    <span class="absolute-date">Mar 28, 2023</span> at <span class="absolute-time">12:22</span>
+                                                </div>    
+                                            </div>
+                                        </li>
+                                        <li class="answer-comment">
+                                            <div class="comment-vote">
+                                                <button id="upvote-btn"><i class="fa fa-arrow-up"></i></button>
+                                                <span class="comment-score">1</span>
+                                                <button id="downvote-btn"><i class="fa fa-arrow-down"></i></button>
+                                            </div>
+                                            <div class="comment-text">
+                                                <div class="comment-copy">
+                                                    <span>Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>
+                                                </div>  
+                                                &bullet;
+                                                <a href="#" class="comment-user text-color-uj">Lorem Ipsum</a>
+                                                <div class="comment-date text-muted">
+                                                    <span class="absolute-date">Feb 12, 2023</span> at <span class="absolute-time">10:12</span>
+                                                </div>    
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- right side navigation bar -->
+                    <div class="sidebar_right">
+                        <div class="sidebar_right-content">
+                            <div class="searchbox-content">
+                                <div class="searchbox-header">
+                                    <h3>Search</h3>
+                                    <div class="searchbar">
+                                        <input id="search-input" type="text" placeholder="Search..">
+                                        <button id="search-btn" onclick="addSearch()"><i class="fa fa-search"></i></button>
+                                    </div>    
+                                </div>
+                                <div class="line-separator-wrapper">
+                                    <div class="line-divider"></div>
+                                    <h5 class="line-separator">Recents</h5>
+                                    <div class="line-divider"></div>
+                                </div>
+                                <div class="searchbox-body">
+                                    <div id="recent-search-status" class="text-size-xsmall text-align-center">No recent searches.</div>
+                                    <ul class="recent-search-list"></ul>
+                                    <button id="clear-search-btn" class="underline text-size-xsmall is-hidden" onclick="clearSearchHistory()">clear all</button>
+                                </div>
+                            </div>    
+                        </div>
+                        <div class="spacing-block padding-medium"></div>
+                        <div class="sidebar_right-content">
+                            <div class="notifications-content">
+                                <div class="notifications-header">
+                                    <h3>Notifications</h3>
+                                </div>
+                                <div class="line-divider"></div>
+                                <div class="notifications-body">
+                                    <div class="text-size-xsmall text-align-center">No new notifications.</div>
+                                </div>
+                            </div>    
+                        </div>
+                    </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- modal create post -->
+    <div class="modal" id="modal-create-post">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <button id="close-btn" class="close-icon" onclick="toggleModal('close')">+</button>
+                <div class="modal-header">
+                    <h1 class="modal-title text-align-center">Ask a Buddy</h1>
+                </div>
+                <div class="spacing-block padding-small"></div>
+                <div class="line-divider"></div>
+                <div class="modal-body">
+                    <form action="#">
+                        <div class="form-group form-input-wrapper">
+                            <div class="form-input">
+                                <input type="text" placeholder="Title">
+                            </div>
+                            <div class="line-divider"></div>
+                            <div class="form-input">
+                                <textarea name="" id="" cols="30" rows="10" placeholder="What's your question? Be specific.."></textarea>
+                            </div>
+                            <div class="line-divider"></div>
+                            <div class="form-input">
+                                <div class="tag-container">
+                                    <input id="tag-input" type="text" placeholder="Add a tag" autocomplete="off">
+                                    <button class="button" onclick="addTag()" id="add-tag-btn">Add</button>
+                                </div>
+                                <ul class="tags"></ul>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="button-submit">Post Your Question</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer text-size-small text-align-center">
+                    <input type="checkbox" name="" id="">
+                    <p for="">send new responses to post via email?</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- javascript -->
+    <script src="js/script.js" defer></script>
+</body>
+</html>
