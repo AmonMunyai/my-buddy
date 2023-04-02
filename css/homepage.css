@@ -214,3 +214,38 @@
     justify-content: center;
     gap: 0.5rem;
 }
+
+.tags {
+    display: flex;
+    padding: 0rem 1rem 1rem;
+    flex-wrap: wrap;
+}
+
+.tag {
+    background-color: #a2a2a4;
+    border-radius: 0.25rem;
+    padding: 0rem 0.5rem;
+    color: #0a0a0c;
+    display: inline-block;
+    margin: 0.25rem;
+}
+
+.tag .fa {
+    cursor: pointer;
+    margin-left: 0.25rem;
+}
+
+.tag-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#add-tag-btn {
+    color: #ecf1f0;
+    background-color: transparent;
+    border: 1px solid #ecf1f0;
+    margin-right: 1rem;
+    margin-top: 1rem
+}

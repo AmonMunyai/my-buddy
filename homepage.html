@@ -283,7 +283,7 @@
                                     <h5 class="line-separator">Recents</h5>
                                     <div class="line-divider"></div>
                                 </div>
-                                <div class="searchox-body">
+                                <div class="searchbox-body">
                                     <div class="text-size-xsmall text-align-center is-hidden">No recent searches.</div>
                                     <ul class="recent-search-list">
                                         <li><a href="#" class="recent-search-item">Lorem ipsum dolor sit amet.</a></li>
@@ -331,6 +331,14 @@
                             <div class="line-divider"></div>
                             <div class="form-input">
                                 <textarea name="" id="" cols="30" rows="10" placeholder="What's your question? Be specific.."></textarea>
+                            </div>
+                            <div class="line-divider"></div>
+                            <div class="form-input">
+                                <div class="tag-container">
+                                    <input id="tag-input" type="text" placeholder="Add a tag" autocomplete="off">
+                                    <button class="button" onclick="addTag()" id="add-tag-btn">Add</button>
+                                </div>
+                                <ul class="tags"></ul>
                             </div>
                         </div>
                         <div class="form-group">
