@@ -6,7 +6,7 @@
     grid-template-columns: 18vh auto 20vw;
     column-gap: 2rem;
     position: relative;
-    margin-top: 5rem;
+    margin-top: 2.5rem;
 }
 
 .sidebar_left {
@@ -24,7 +24,6 @@
 .profile-link {
     display: flex;
     flex-direction: column;
-    column-gap: 5rem;
     align-items: center;
     width: 100%;
 }
@@ -55,39 +54,6 @@
     text-align: center;
 }
 
-.ask-buddy {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background: #222326;
-    margin-top: -4rem;
-    padding: 0.5rem 1rem;
-    border-radius: 0.5rem;
-}
-
-.ask-buddy input[type="text"] {
-    justify-self: start;
-    background: transparent;
-    padding-left: 1rem;
-    outline: none;
-    border: 0;
-    margin-right: auto;
-    width: 80%;
-    font-size: 1rem;
-    color: #ecf1f0;
-}
-
-.ask-buddy input[type="submit"] {
-    color: #ecf1f0;
-    background-color: #f26522;
-    border: 0;
-}
-
-.ask-buddy .profile-pic {
-    transform: scale(0.75);
-}
-
 /* post */
 
 .post {
@@ -113,6 +79,11 @@
     gap: 0.5rem;
     align-items: center;
     font-size: 0.625rem;
+}
+
+.post-content-stats {
+    margin-right: auto;
+    margin-left: 1rem;
 }
 
 .post-tag {
@@ -149,8 +120,8 @@
 .sidebar_right {
     height: max-content;
     position: sticky;
-    bottom: 0;
     width: 100%;
+    margin-top: 2.5rem;
 }
 
 .sidebar_right-content{
@@ -206,8 +177,40 @@
 
 .recent-search-item {
     background-color: #f26522;
-    border-radius: 0.5rem;
+    border-radius: 0.25rem;
     padding: 0.5rem 0.5rem 0.25rem;
     color: #ecf1f0;
     font-size: 0.8rem;
+}
+
+#modal-create-post .modal-header input[type="text"] {
+    border: 1px solid #f26522;
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem 0.25rem;
+    outline: none;
+    background-color: transparent;
+    width: 100%;
+    color: #ecf1f0;
+}
+
+#modal-create-post .modal-body textarea {
+    background-color: transparent;
+    outline: none;
+    color: #ecf1f0;
+    width: 100%;
+    border: 0;
+    padding: 0.5rem 1.5rem 0rem;
+    resize: none;
+    font-family: inherit;
+}
+
+#modal-create-post .modal-dialog {
+    width: 40rem;
+}
+
+#modal-create-post .modal-footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
 }

@@ -51,7 +51,7 @@
                                 <li><a href="#" class="sidebar-link is-hidden"><i class="fa fa-bell"></i>Notifications</a></li>
                                 <li><a href="#" class="sidebar-link"><i class="fa fa-tag"></i>Tags</a></li>
                                 <li><a href="#" class="sidebar-link"><i class="fa fa-users"></i>Communities</a></li>
-                                <li><a href="#" class="sidebar-link"><i class="fa fa-question"></i>Ask a Buddy?</a></li>
+                                <li><a href="#" class="sidebar-link" onclick="toggleModal('create-post')"><i class="fa fa-question"></i>Ask a Buddy?</a></li>
                             </ul>
                         </div>
                     </nav>
@@ -77,6 +77,12 @@
                                             <li><a href="#" class="post-tag">ipsum</a></li>
                                             <li><a href="#" class="post-tag">dolor</a></li>
                                         </ul>
+                                        <div class="post-content-stats">
+                                            <a href="#" class="text-color-uj">
+                                                <span class="post-content-stats-item-number">0</span>
+                                                <span class="post-content-stats-item-unit">answers</span>    
+                                            </a>
+                                        </div>
                                         <div class="user-card">
                                             <div class="user-card-profile-pic">
                                                 <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png" loading="lazy" alt>
@@ -112,6 +118,12 @@
                                             <li><a href="#" class="post-tag">ipsum</a></li>
                                             <li><a href="#" class="post-tag">dolor</a></li>
                                         </ul>
+                                        <div class="post-content-stats">
+                                            <a href="#" class="text-color-uj">
+                                                <span class="post-content-stats-item-number">6</span>
+                                                <span class="post-content-stats-item-unit">answers</span>    
+                                            </a>
+                                        </div>
                                         <div class="user-card">
                                             <div class="user-card-profile-pic">
                                                 <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png" loading="lazy" alt>
@@ -147,6 +159,12 @@
                                             <li><a href="#" class="post-tag">ipsum</a></li>
                                             <li><a href="#" class="post-tag">dolor</a></li>
                                         </ul>
+                                        <div class="post-content-stats">
+                                            <a href="#" class="text-color-uj">
+                                                <span class="post-content-stats-item-number">8</span>
+                                                <span class="post-content-stats-item-unit">answers</span>    
+                                            </a>
+                                        </div>
                                         <div class="user-card">
                                             <div class="user-card-profile-pic">
                                                 <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png" loading="lazy" alt>
@@ -182,6 +200,12 @@
                                             <li><a href="#" class="post-tag">ipsum</a></li>
                                             <li><a href="#" class="post-tag">dolor</a></li>
                                         </ul>
+                                        <div class="post-content-stats">
+                                            <a href="#" class="text-color-uj">
+                                                <span class="post-content-stats-item-number">12</span>
+                                                <span class="post-content-stats-item-unit">answers</span>    
+                                            </a>
+                                        </div>
                                         <div class="user-card">
                                             <div class="user-card-profile-pic">
                                                 <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png" loading="lazy" alt>
@@ -217,6 +241,12 @@
                                             <li><a href="#" class="post-tag">ipsum</a></li>
                                             <li><a href="#" class="post-tag">dolor</a></li>
                                         </ul>
+                                        <div class="post-content-stats">
+                                            <a href="#" class="text-color-uj">
+                                                <span class="post-content-stats-item-number">27</span>
+                                                <span class="post-content-stats-item-unit">answers</span>    
+                                            </a>
+                                        </div>
                                         <div class="user-card">
                                             <div class="user-card-profile-pic">
                                                 <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png" loading="lazy" alt>
@@ -281,6 +311,41 @@
             </div>
         </section>
     </main>
+
+    <!-- modal create post -->
+    <div class="modal" id="modal-create-post">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <button id="close-btn" class="close-icon" onclick="toggleModal('close')">+</button>
+                <div class="modal-header">
+                    <h1 class="modal-title text-align-center">Ask a Buddy</h1>
+                </div>
+                <div class="spacing-block padding-small"></div>
+                <div class="line-divider"></div>
+                <div class="modal-body">
+                    <form action="#">
+                        <div class="form-group form-input-wrapper">
+                            <div class="form-input">
+                                <input type="text" placeholder="Title">
+                            </div>
+                            <div class="line-divider"></div>
+                            <div class="form-input">
+                                <textarea name="" id="" cols="30" rows="10" placeholder="What's your question? Be specific.."></textarea>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="button-submit">Post Your Question</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer text-size-small text-align-center">
+                    <input type="checkbox" name="" id="">
+                    <p for="">send new responses to post via email?</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
 
     <!-- javascript -->
     <script src="js/script.js" defer></script>
