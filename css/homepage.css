@@ -66,6 +66,7 @@
     padding: 4rem;
 }
 
+.question-content-footer,
 .post-content-footer {
     margin-top: 1rem;
     font-size: 0.85rem;
@@ -74,6 +75,7 @@
     justify-content: space-between;
 }
 
+.question-content-tags,
 .post-content-tags {
     display: flex;
     gap: 0.5rem;
