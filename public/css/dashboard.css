@@ -75,23 +75,9 @@
     justify-content: space-between;
 }
 
-.question-content-tags,
-.post-content-tags {
-    display: flex;
-    gap: 0.5rem;
-    align-items: center;
-    font-size: 0.625rem;
-}
-
 .post-content-stats {
     margin-right: auto;
     margin-left: 1rem;
-}
-
-.post-tag {
-    background-color: hsl(0, 0%, 100%, 0.1);
-    padding: 0.35rem;
-    border-radius: 0.25rem;
 }
 
 .user-card {
@@ -119,46 +105,6 @@
 
 /* left side navigation bar */
 
-.sidebar_right {
-    height: max-content;
-    position: sticky;
-    width: 100%;
-    margin-top: 2.5rem;
-}
-
-.sidebar_right-content{
-    border-radius: 0.5rem;
-    background-color: #222326;
-    padding: 2rem 1rem;
-
-}
-
-.notifications-content,
-.searchbox-content {
-    display: flex;
-    flex-direction: column;
-    gap: 1.25rem;
-}
-
-.searchbar {
-    border-bottom: 1px solid #0a0a0c;
-    border-radius: 0.5rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 0.85rem 1rem 0.85rem;
-}
-
-.searchbar input[type="text"] {
-    outline: none;
-    border: 0;
-    background: transparent;
-    margin-right: auto;
-    color: #ecf1f0;
-    width: 100%;
-}
-
 .is-hidden {
     visibility: hidden;
     display: none;
@@ -174,6 +120,8 @@
     color: #ecf1f0;
 }
 
+#modal-update-post .modal-body textarea,
+#modal-add-comment .modal-body textarea,
 #modal-create-post .modal-body textarea {
     background-color: transparent;
     outline: none;
@@ -183,10 +131,13 @@
     padding: 0.5rem 1.5rem 0rem;
     resize: none;
     font-family: inherit;
+    min-height: 5rem;
+    max-height: 16rem;
 }
 
+#modal-update-post .modal-dialog,
 #modal-create-post .modal-dialog {
-    width: 40rem;
+    width: 30rem;
 }
 
 #modal-create-post .modal-footer {
@@ -194,41 +145,6 @@
     align-items: center;
     justify-content: center;
     gap: 0.5rem;
-}
-
-.tags {
-    display: flex;
-    padding: 0rem 1rem 1rem;
-    flex-wrap: wrap;
-}
-
-.tag {
-    background-color: #a2a2a4;
-    border-radius: 0.25rem;
-    padding: 0rem 0.5rem;
-    color: #0a0a0c;
-    display: inline-block;
-    margin: 0.25rem;
-}
-
-.tag .fa {
-    cursor: pointer;
-    margin-left: 0.25rem;
-}
-
-.tag-container {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-#add-tag-btn {
-    color: #ecf1f0;
-    background-color: transparent;
-    border: 1px solid #ecf1f0;
-    margin-right: 1rem;
-    margin-top: 1rem
 }
 
 .searchbox-body {

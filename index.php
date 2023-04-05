@@ -1,32 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>myBuddy - Your Ultimate Guide to Varsity Life</title>
-
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-    <!-- navigation bar -->
-    <header>
-        <nav class="navbar navbar-top">
-            <a href="#" class="navbar_logo-link text-color-white">
-                <h1 class="navbar_logo">my<span class="text-color-uj">Buddy</span></h1>
-            </a>
-            <ul class="navbar_links">
-                <li><a href="blog.html" class="navbar_link">Blog</a></li>
-                <li><a href="#" class="navbar_link">Docs</a></li>
-                <li><a href="#" class="navbar_link">Developers</a></li>
-            </ul>
+<?php
+    $title= "myBuddy - Your Ultimate Guide to Varsity Life";
+    $keywords = "";
+    $description = "";
+    require_once "./core/init.php";
+    require_once "./shared/header.php";
+?>
             <div class="navbar_buttons">
                 <a href="#" id="login-btn" class="button" onclick="toggleModal('login')">Log in</a>
                 <a href="#" id="join-btn" class="button" onclick="toggleModal('join')">Join</a>
             </div>
         </nav>
     </header>
-
     <!-- main component -->
     <main class="main-wrapper">
         <!-- section header -->
@@ -48,7 +32,7 @@
                                 <div class="spacing-block padding-medium"></div>
                                 <div class="button-group">
                                     <a href="#" id="get_started-btn" class="button is-large" onclick="toggleModal('join')">Get Started</a>
-                                    <p id="registration-msg" class="text-align-left text-size-small">
+                                    <p id="registration-msg" class="text-align-left text-size-small is-hidden">
                                         You must be a registered UJ
                                         <br>
                                         student in order to sign up.
@@ -348,7 +332,7 @@
                                 <div class="text-align-center max-width-large align-center">
                                     <h6 class="heading-style-h6">myBuddy IS POWERED BY</h6>
                                     <div class="spacing-block"></div>
-                                    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/a/af/University_of_Johannesburg_Logo.svg/375px-University_of_Johannesburg_Logo.svg.png" loading="lazy" height="100" alt="university-of-johannesburg-logo">
+                                    <img src="./public/assets/images/university-of-johannesburg-logo.png" loading="lazy" height="125" alt="university-of-johannesburg-logo">
                                     <div class="spacing"></div>
                                     <p class="text-size-medium">The country's second strongest brand, offering world-class, academic programmes designed to prepare students for the world.</p>
                                     <div class="spacing-block padding-small-plus"></div>
@@ -362,135 +346,7 @@
         </section>
     </main>
 
-    <!-- footer -->
-    <footer class="align-center">
-        <div class="footer-wrapper">
-            <ul class="footer_legal-list align-center text-size-small">
-                <li class="footer_credit-text">&copy; University of Johannesburg</li>
-                <li><a href="#" class="footer_legal-link">Privacy Policy</a></li>
-                <li><a href="#" class="footer_legal-link">Terms of Service</a></li>
-                <li><a href="#" class="footer_legal-link">About</a></li>
-                <li class="footer_credit-text">
-                    powered by
-                    <a href="https://www.uj.ac.za/" target="_blank" class="footer_legal-link">UJ</a>
-                </li>
-            </ul>
-        </div>
-    </footer>
-
-    <!-- modal login -->
-    <div class="modal" id="modal-login">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <button id="close-btn" class="close-icon" onclick="toggleModal('close')">+</button>
-                <div class="modal-header">
-                    <h1 class="modal-title text-align-center">Sign In</h1>
-                </div>
-                <div class="spacing-block padding-small"></div>
-                <div class="line-divider"></div>
-                <div class="modal-body">
-                    <!-- sign in with ulink -->
-                    <!-- <div class="spacing-block padding-small"></div>
-                    <div class="line-separator-wrapper">
-                        <div class="line-divider"></div>
-                        <div class="line-separator">OR</div>
-                        <div class="line-divider"></div>
-                    </div> -->
-                    <form action="#">
-                        <div class="form-group form-input-wrapper">
-                            <div class="form-input">
-                                <input type="text" placeholder="Email" required>
-                            </div>
-                            <div class="line-divider"></div>
-                            <div class="form-input">
-                                <input type="password" placeholder="Password" required>
-                            </div>
-                        </div>
-                        <div class="spacing-block padding-xsmall"></div>
-                        <p class="text-align-right text-size-xsmall">
-                            <a href="#" onclick="toggleModal('forgot-password')">Forgot your password?</a>
-                        </p>
-                        <div class="form-group">
-                            <button type="submit" class="button-submit">Log in</button>
-                        </div>
-                    </form>
-                </div>
-                <div class="modal-footer text-size-small text-align-center">
-                    <a href="#" class="underline" onclick="toggleModal('join')">Sign up</a>
-                    <span>if you don't have an account yet.</span>
-                </div>
-            </div>
-        </div>
-    </div>
-    
-    <!-- modal join -->
-    <div class="modal" id="modal-join">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <button id="close-btn" class="close-icon" onclick="toggleModal('close')">+</button>
-                <div class="modal-header">
-                    <h1 class="modal-title text-align-center">Create<br>Account</h1>
-                </div>
-                <div class="spacing-block padding-small"></div>
-                <div class="line-divider"></div>
-                <div class="modal-body">
-                    <form action="#">
-                        <div class="form-group form-input-wrapper">
-                            <div class="form-input">
-                                <input type="text" placeholder="Email" required>
-                            </div>
-                            <div class="line-divider"></div>
-                            <div class="form-input">
-                                <input type="text" placeholder="Username" required>
-                            </div>
-                            <div class="line-divider"></div>
-                            <div class="form-input">
-                                <input type="password" placeholder="Password" required>
-                            </div>    
-                        </div>
-                        <div class="form-group">
-                            <button type="submit" class="button-submit">Join</button>
-                        </div>
-                    </form>
-                </div>
-                <div class="modal-footer text-size-small text-align-center">
-                    <span>By creating an account, you agree to our</span>
-                    <a href="#">Privacy Policy</a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- modal forgot password -->
-    <div class="modal" id="modal-forgot-password">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <button id="close-btn" class="close-icon" onclick="toggleModal('close')">+</button>
-                <div class="modal-header">
-                    <h1 class="modal-title text-align-center">Reset Password</h1>
-                </div>
-                <div class="spacing-block padding-small"></div>
-                <div class="line-divider"></div>
-                <div class="modal-body">
-                    <form action="#">
-                        <div class="form-group form-input-wrapper">
-                            <div class="form-input">
-                                <input type="text" placeholder="Email" required>
-                            </div>    
-                        </div>
-                        <div class="form-group">
-                            <button type="submit" class="button-submit">Forgot</button>
-                        </div>
-                    </form>
-                </div>
-                <div class="modal-footer text-size-small text-align-center">
-                    <a href="#" onclick="toggleModal('login')">Back to Sign In</a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- javascript -->
-    <script src="js/script.js" defer></script>
-</body>
-</html>
+<?php
+    require_once "./shared/modal.php";
+    require_once "./shared/footer.php";
+?>
