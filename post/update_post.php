@@ -33,8 +33,18 @@
         } else {
             mysqli_stmt_bind_param($stmt, "s", $post_id);
             mysqli_stmt_execute($stmt);
-            header("Location: " . ROOT_URL . "/dashboard.php?deletepost=success");
-            exit();
+            $sql = "DELETE FROM post_answer WHERE post_id=?";
+            $stmt = mysqli_stmt_init($connection);
+    
+            if (!mysqli_stmt_prepare($stmt, $sql)) {
+                header("Location: " . ROOT_URL . "/post/question.php?id=" . $post_id . "&error=sqlerror");
+                exit();
+            } else {
+                mysqli_stmt_bind_param($stmt, "s", $post_id);
+                mysqli_stmt_execute($stmt);
+                header("Location: " . ROOT_URL . "/dashboard.php?deletepost=success");
+                exit();
+            }
         }
     } else {
         header("Location: " . ROOT_URL . "/post/question.php?id=" . $post_id);
