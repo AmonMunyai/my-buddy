@@ -22,7 +22,10 @@
             } else {
                 mysqli_stmt_bind_param($stmt, "ss", $post_answer_id, $user_id);
                 mysqli_stmt_execute($stmt);
-                $sql = "UPDATE post_answer SET post_answer_number_of_votes=$post_answer_number_of_votes + 1 WHERE id=" . $post_answer_id;
+                
+                $post_answer_number_of_votes += 1;
+                
+                $sql = "UPDATE post_answer SET post_answer_number_of_votes=$post_answer_number_of_votes WHERE id=" . $post_answer_id;
                 mysqli_query($connection, $sql);
                 header("Location: " . ROOT_URL . '/post/question.php?id=' . $post_id . "&vote=success");
                 exit();
@@ -37,7 +40,10 @@
             } else {
                 mysqli_stmt_bind_param($stmt, "ss", $user_id, $post_answer_id);
                 mysqli_stmt_execute($stmt);
-                $sql = "UPDATE post_answer SET post_answer_number_of_votes=$post_answer_number_of_votes - 1 WHERE id=" . $post_answer_id;
+
+                $post_answer_number_of_votes -= 1;
+                
+                $sql = "UPDATE post_answer SET post_answer_number_of_votes=$post_answer_number_of_votes WHERE id=" . $post_answer_id;
                 mysqli_query($connection, $sql);
                 header("Location: " . ROOT_URL . '/post/question.php?id=' . $post_id . "&vote=success");
                 exit();
