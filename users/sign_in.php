@@ -1,7 +1,7 @@
 <?php
-    session_start();
+    require_once "../core/init.php";
+
     if (isset($_POST['login-submit'])) {
-        require_once "../core/init.php";
 
         $user_email = $_POST["email"];
         $user_password = $_POST["password"];
@@ -21,11 +21,12 @@
                     header("Location: " . ROOT_URL . "/index.php?error=incorrectpassword");
                     exit();
                 } else if ($check_password == true) {
-                    session_start();
                     $_SESSION['user_id'] = $row['id'];
                     $_SESSION['user_firstname'] = $row['user_firstname'];
                     $_SESSION['user_lastname'] = $row['user_lastname'];
                     $_SESSION['user_username'] = $row['user_firstname'] . $row['user_lastname'];
+                    $_SESSION['user_avatar'] = $row['user_avatar'];
+
                     header("Location: " . ROOT_URL . "/dashboard.php?login=success");
                     exit();    
                 }
