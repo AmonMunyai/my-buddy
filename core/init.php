@@ -13,6 +13,4 @@
     if (!$connection) {
         die("Connection failed: " . mysqli_connect_error());
     }
-
-    $user_avatar = $_SESSION['user_avatar'] ?? ROOT_URL . "/public/assets/images/blank-profile-picture.png";
 ?>
