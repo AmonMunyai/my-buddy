@@ -154,16 +154,13 @@ main > header {
 .profile-pic {
     width: 4rem;
     height: 4rem;
-    border-radius: 50%;
-    background-color: red; /* will be replaced by profile pic */
-    filter: saturate(0%);
 }
 
 .profile-pic img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 50%;
+    border-radius: 15%;
 }
 
 /* pills */
@@ -423,8 +420,34 @@ footer {
     font-size: 1rem;
 }
 
-.modal a:hover {
+.modal a:hover:not(.notification-item) {
     color: #f26522;
+}
+
+/* notification */
+
+.profile-pic.notification-image {
+    width: 2rem;
+    height: 2rem;
+}
+
+.notification-item {
+    border: 1px solid hsl(0, 0%, 100%, 0.1);
+    border-radius: 0.5rem;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 20% 80%;
+    padding: 1rem;
+    align-items: flex-start;
+    height: 4rem;
+    max-height: 6rem;
+    margin-bottom: 0.25rem;
+    transition: all 300ms ease-in-out;
+}
+
+.notification-item:hover {
+    opacity: 0.8;
+    transform: scale(0.975);
 }
 
 /* helpers-padding */
@@ -673,6 +696,14 @@ footer {
 }
 
 /* helpers-misc */
+
+.flash-msg {
+    border-bottom: 1px solid hsl(0, 0%, 100%, 0.1);
+    color: hsl(19, 89%, 54%, 0.8);
+    text-align: center;
+    padding: 1rem 0rem;
+    display: none;
+}
 
 .line-divider {
     width: 100%;
