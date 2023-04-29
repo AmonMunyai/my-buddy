@@ -39,39 +39,8 @@ function auto_grow(item) {
     item.style.height = (item.scrollHeight) + "px";
 }
 
-const searchHistory = document.querySelector(".recent-list");
-const recentStatus = document.getElementById('recent-status');
-const clearSearchBtn = document.forms['searchForm']['clearBtn'];
+const uploadAvatarBtn = document.getElementById('upload-avatar-btn');
+const removeAvatarBtn = document.getElementById('remove-avatar-btn');
+const profileForm = document.getElementById('profile');
 
-
-// Function for outputing search history
-function addSearch() {
-    const inputSearch = document.forms['searchForm']['searchInput'];
-
-    // Check if inputSearch is empty
-    if (inputSearch.value == "") {
-        return
-    }
-
-    clearSearchBtn.classList.remove('is-hidden');
-    recentStatus.classList.add('is-hidden');
-
-    // Create recent-search-item, and insert the inputSearch value
-    const newSearch = `
-        <li></i><a href="#" class="recent-item">${inputSearch.value}</a></li>
-    `;
-
-    // Output the search
-    searchHistory.innerHTML += newSearch;
-
-    // Clear the inputSearch field
-    inputSearch.value = "";
-
-    return searchHistory;
-}
-
-function clearSearchHistory() {
-    searchHistory.innerHTML = "";
-    recentStatus.classList.remove('is-hidden');
-    clearSearchBtn.classList.add('is-hidden');
-}
+uploadAvatarBtn.onclick = () => document.getElementById('upload-image').click();
