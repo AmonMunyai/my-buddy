@@ -9,18 +9,12 @@
                 </div>
                 <div class="spacing-block padding-small"></div>
                 <div class="line-divider"></div>
+                <div class="flash-msg"></div>
                 <div class="modal-body">
-                    <!-- sign in with ulink -->
-                    <!-- <div class="spacing-block padding-small"></div>
-                    <div class="line-separator-wrapper">
-                        <div class="line-divider"></div>
-                        <div class="line-separator">OR</div>
-                        <div class="line-divider"></div>
-                    </div> -->
                     <form action="<?php echo ROOT_URL; ?>/users/sign_in.php" method="post">
                         <div class="form-group form-input-wrapper">
                             <div class="form-input">
-                                <input type="text" name="email" placeholder="Email" autocomplete="off" required>
+                                <input type="email" name="email" placeholder="Email" autocomplete="off" required>
                             </div>
                             <div class="line-divider"></div>
                             <div class="form-input">
@@ -32,7 +26,7 @@
                             <a href="#" onclick="toggleModal('forgot-password')">Forgot your password?</a>
                         </p>
                         <div class="form-group">
-                            <button type="submit" name="login-submit" class="button-submit">Log in</button>
+                            <button type="submit" name="login-submit" class="button-submit" onclick="handleModalErrors()">Log in</button>
                         </div>
                     </form>
                 </div>
@@ -66,7 +60,7 @@
                             </div>
                             <div class="line-divider"></div>
                             <div class="form-input">
-                                <input type="text" name="email" placeholder="Email" autocomplete="off" required>
+                                <input type="email" name="email" placeholder="Email" autocomplete="off" required>
                             </div>
                             <div class="line-divider"></div>
                             <div class="form-input">
@@ -74,7 +68,7 @@
                             </div>    
                         </div>
                         <div class="form-group">
-                            <button type="submit" name="join-submit" class="button-submit">Join</button>
+                            <button type="submit" name="join-submit" class="button-submit" onclick="handleModalErrors()">Join</button>
                         </div>
                     </form>
                 </div>
@@ -97,10 +91,10 @@
                 <div class="spacing-block padding-small"></div>
                 <div class="line-divider"></div>
                 <div class="modal-body">
-                    <form action="<?php echo ROOT_URL; ?>/users/password/new.php" method="post">
+                    <form action="<?php echo ROOT_URL; ?>/users/password/forgot.php" method="post">
                         <div class="form-group form-input-wrapper">
                             <div class="form-input">
-                                <input type="text" name="email" placeholder="Email" autocomplete="off" required>
+                                <input type="email" name="email" placeholder="Email" autocomplete="off" required>
                             </div>    
                         </div>
                         <div class="form-group">
@@ -136,14 +130,14 @@
                                 <textarea name="content" oninput="auto_grow(this)" placeholder="What's your question? Be specific.." autocomplete="off" required></textarea>
                             </div>
                         </div>
+                        <div class="form-group text-size-small text-align-center">
+                            <input type="checkbox" name="mailsend" value="1">
+                            <label for="mailsend">send new responses to post via email?</label>
+                        </div>
                         <div class="form-group">
                             <button type="submit" name="post-submit" class="button-submit">Post Your Question</button>
                         </div>
                     </form>
-                </div>
-                <div class="modal-footer text-size-small text-align-center">
-                    <input type="checkbox" name="mailsend">
-                    <p for="mailsend">send new responses to post via email?</p>
                 </div>
             </div>
         </div>
@@ -163,11 +157,11 @@
                     <form action="<?php echo ROOT_URL; ?>/post/update_post.php?id=<?php echo $_GET['id'] ?? NULL; ?>" method="post">
                         <div class="form-group form-input-wrapper">
                             <div class="form-input">
-                                <input type="text" name="title" value="" autocomplete="off" required>
+                                <input type="text" name="title" autocomplete="off" required>
                             </div>
                             <div class="line-divider"></div>
                             <div class="form-input">
-                                <textarea name="content" oninput="auto_grow(this)" autocomplete="off" required>blah blah</textarea>
+                                <textarea name="content" oninput="auto_grow(this)" autocomplete="off" required></textarea>
                             </div>
                         </div>
                         <div class="form-group">
@@ -193,16 +187,26 @@
                 <div class="spacing-block padding-small"></div>
                 <div class="line-divider"></div>
                 <div class="modal-body">
-                    <form action="#" name="searchForm" onsubmit="addSearch()">
+                    <?php
+                        if (isset($post)) {
+                            echo '<form action="' . ROOT_URL . '/dashboard.php' . '" method="post">';
+                        } else {
+                            echo '<form>';
+                        }
+                    ?>
                         <div class="form-group form-input-wrapper">
                             <div class="form-input">
-                                <input name="searchInput" type="text" placeholder="Search.." autocomplete="off">
+                                <input name="query" type="text" placeholder="Search.." autocomplete="off">
                             </div>
                             <div class="line-divider"></div>
                             <div class="form-input">
                             </div>
                         </div>
-                        <div class="form-group recent-search">
+
+                        <div class="spacing-block padding-medium"></div>
+                        <div class="line-divider"></div>
+
+                        <!-- <div class="form-group recent-search">
                             <div class="line-separator-wrapper">
                                 <div class="line-divider"></div>
                                 <h5 class="line-separator">Recents</h5>
@@ -211,10 +215,10 @@
                             <div class="spacing-block padding-small"></div>
                             <div id="recent-status" class="text-size-xsmall text-align-center text-muted">No recent searches.</div>
                             <ul class="recent-list"></ul>
-                            <button name="clearBtn" id="clear-search-btn" class="underline text-size-xsmall is-hidden" onclick="clearSearchHistory()">clear all</button>    
-                        </div>
+                            <button name="clear-btn" id="clear-search-btn" class="underline text-size-xsmall is-hidden" onclick="clearSearchHistory()">clear all</button>    
+                        </div> -->
                         <div class="form-group">
-                            <button type="submit" id="search-btn" class="button-submit">Search</button>
+                            <button type="submit" name="search-submit" id="search-btn" class="button-submit">Search</button>
                         </div>
                     </form>
                 </div>
@@ -236,30 +240,66 @@
                 <div class="line-divider"></div>
                 <div class="modal-body">
                     <div class="spacing-block padding-small"></div>
-                    <div class="text-size-xsmall text-align-center text-muted">No new notifications.</div>
                     <ul class="notifications-list">
-                        <li class="notification-item"></li>
+                        <?php
+                            if (isset($_SESSION['user_id'])) {
+                                $sql = "SELECT * FROM user_notification WHERE user_id=" . $_SESSION['user_id'];
+                                $notifications = mysqli_query($connection, $sql);
+        
+                                if (mysqli_num_rows($notifications) > 0) {
+                                    foreach ($notifications as $notification) {    
+                        ?>
+                        <li>
+                            <a href="<?php echo $notification['user_notification_link']; ?>" class="notification-item">
+                                <div class="notification-image profile-pic">
+                                    <img src="<?php echo $notification['user_notification_image']; ?>" loading="lazy" alt>
+                                </div>
+                                <div class="notification-message">
+                                    <span class="text-size-xsmall"><?php echo $notification['user_notification_message']; ?></span>
+                                </div>
+                            </a>
+                        </li>
+                        <?php
+                                    }
+                        ?>
                     </ul>
-                    <!-- <button name="clearBtn" id="clear-search-btn" class="underline text-size-xsmall is-hidden" onclick="clearSearchHistory()">clear all</button>     -->
                 </div>
                 <div class="modal-footer text-size-small text-align-center">
+                    <a href="<?php echo ROOT_URL; ?>/post/notification_clear.php" name="clear-btn" id="clear-search-btn" class="underline text-size-xsmall">clear all</a>
+                        <?php
+                                } else {
+                        ?>
+                    </ul>
+                </div>
+                <div class="modal-footer text-size-small text-align-center">
+                    <div class="text-size-xsmall text-align-center text-muted">No new notifications.</div>
+                        <?php
+                                }
+                            }
+                        ?>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- modal add comment -->
-    <div class="modal" id="modal-add-comment">
+    <!-- modal add answer -->
+    <div class="modal" id="modal-add-answer">
         <div class="modal-dialog">
             <div class="modal-content">
                 <button id="close-btn" class="close-icon" onclick="toggleModal('close')">+</button>
                 <div class="modal-header">
-                    <h1 class="modal-title text-align-center">Your Answer</h1>
+                    <h1 class="modal-title text-align-center">Know The Answer?</h1>
                 </div>
                 <div class="spacing-block padding-small"></div>
                 <div class="line-divider"></div>
                 <div class="modal-body">
-                    <form action="<?php echo ROOT_URL; ?>/post/answers/add_answer.php?post_id=<?php echo $post['id']; ?>" method="post">
+                    <?php
+                        if (isset($post)) {
+                            echo '<form action="' . ROOT_URL . '/post/answers/add_answer.php?post_id=' . $post['id'] . '" method="post">';
+                        } else {
+                            echo '<form>';
+                        }
+                    ?>
                         <div class="form-group form-input-wrapper">
                             <div class="line-divider"></div>
                             <div class="form-input">
@@ -274,6 +314,70 @@
                 <div class="modal-footer text-size-small text-align-center">
                     <p>By clicking, you agree to our <a href="#" class="underline">terms of service</a> and <a href="#" class="underline">privacy policy</a></p>
                 </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- modal add comment -->
+    <div class="modal" id="modal-add-comment">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <button id="close-btn" class="close-icon" onclick="toggleModal('close')">+</button>
+                <div class="modal-header">
+                    <h1 class="modal-title text-align-center">Any Suggestions</h1>
+                </div>
+                <div class="spacing-block padding-small"></div>
+                <div class="line-divider"></div>
+                <div class="modal-body">
+                    <?php
+                        if (isset($post)) {
+                            echo '<form action="' . ROOT_URL . '/post/answers/add_comment.php?post_id=' . $post['id'] . '&post_answer_id=' . $post_answer['id'] . '" method="post">';
+                        } else {
+                            echo '<form>';
+                        }
+                    ?>
+                        <div class="form-group form-input-wrapper">
+                            <div class="line-divider"></div>
+                            <div class="form-input">
+                                <textarea name="comment_content" oninput="auto_grow(this)" placeholder="Your Comment.." autocomplete="off" required></textarea>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" name="comment-submit" class="button-submit" autocomplete="off">Comment</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer text-size-small text-align-center">
+                    <p>By clicking, you agree to our <a href="#" class="underline">terms of service</a> and <a href="#" class="underline">privacy policy</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- modal profile -->
+    <div class="modal" id="modal-profile">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <button id="close-btn" class="close-icon" onclick="toggleModal('close')">+</button>
+                <div class="modal-header">
+                    <h1 class="modal-title text-align-center">Change<br>Profile Photo</h1>
+                </div>
+                <div class="spacing-block padding-small"></div>
+                <div class="line-divider"></div>
+                <div class="modal-body">
+                    <form action="<?php echo ROOT_URL; ?>/users/update_avatar.php" method="post" enctype="multipart/form-data" id="profile">
+                        <div class="form-group">
+                            <input type="file" name="user_avatar" accept="image/jpeg,image/png"></input>
+                            <input type="submit" name="upload-avatar-submit" id="upload-avatar-btn" class="button-submit" value="Upload Photo"></input>
+                        </div>
+                    </form>
+                    <form action="<?php echo ROOT_URL; ?>/users/remove_avatar.php" method="post">
+                        <div class="form-group">
+                            <input type="submit" name="remove-avatar-submit" id="remove-avatar-btn" class="button-submit" value="Remove Current Photo"></input>
+                        </div>
+                    </form>
+                </div>
+                <div class="spacing-block padding-medium"></div>
             </div>
         </div>
     </div>
