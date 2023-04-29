@@ -120,9 +120,7 @@
     color: #ecf1f0;
 }
 
-#modal-update-post .modal-body textarea,
-#modal-add-comment .modal-body textarea,
-#modal-create-post .modal-body textarea {
+.modal-body textarea {
     background-color: transparent;
     outline: none;
     color: #ecf1f0;
