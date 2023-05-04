@@ -3,15 +3,11 @@
 <h4 align="center">myBuddy</h4>
 
 ---
-
 <p align="center">Your Ultimate Guide to Varsity Life</p>
 
-myBuddy is a PHP based website that helps students find the answers they need, when they need them. It is a tool for empowering students to find what they need to ace student life, get ahead with course material, and build a thriving campus social life.
-
-Table of Contents
----
+## Table of Contents
+- [myBuddy](#mybuddy)
 - [Features](#features)
-- [Prerequisites](#prerequisites)
 - [Getting Started](#getting-started)
 - [Project Structure](#project-structure)
 - [Documentation](#documentation)
@@ -19,6 +15,9 @@ Table of Contents
 - [Authors](#authors)
 - [Acknowledgements](#acknowledgements)
 
+## myBuddy
+
+myBuddy is a PHP based website that helps students find the answers they need, when they need them. It is a tool for empowering students to find what they need to ace student life, get ahead with course material, and build a thriving campus social life.
 
 ## Features
 
@@ -27,18 +26,14 @@ Table of Contents
 - **Forum**: The forum is a space where students can ask and answer questions about their university. This includes and not limited to questions about academics, campus life, or extracurricular activities. This feature also includes a search function making it easy for students to find the information they need.
 - **Blog or News Section**: Creating a blog or news section with updates on university news and events to keep students informed and engaged. This includes articles written by the [University of Johannesburg](https://www.uj.ac.za/) staff, and updates on university policies and/or initiatives.
 
-## Prerequisites
-
-- Latest Version of PHP and Apache Server [XAMMP](https://www.apachefriends.org/index.html) or other
-
 ## Getting Started
 
 - Download [XAMMP](https://www.apachefriends.org/index.html) or other
 - Start Apache and MySQL
 - Clone or Download [myBuddy](https://github.com/AmonMunyai/my-buddy/archive/refs/heads/main.zip)
-    - Extract this folder in xammp htdocs as ```"mybuddy"```
+    - Extract this folder in xammp htdocs as ```mybuddy```
     - Access the website with [localhost/mybuddy](http://localhost/mybuddy/)
-- Import [mybuddy.sql]()  to [PHPMyAdmin]
+- Import [mybuddy.sql](https://github.com/AmonMunyai/my-buddy/blob/main/database/mybuddy.sql)  to [PHPMyAdmin]
     - Go to ```localhost/phpmyadmin```
     - Select ```Import``` menu from the top
     - Click ```Choose File``` button and select ```mybuddy.sql```
@@ -78,7 +73,7 @@ Table of Contents
 
 ## Documentation
 
-Start reading at the [GitHub wiki](https://github.com/AmonMunyai/my-buddy/wiki). If you're having trouble, examples of how to use myBuddy for common scenarios can be found in the examples folder.
+If you're having trouble, examples of how to use myBuddy for common scenarios can be found in the examples folder.
 
 |landingPage|
 |---|
@@ -125,4 +120,4 @@ Start reading at the [GitHub wiki](https://github.com/AmonMunyai/my-buddy/wiki).
 
 - [@mahon3d](https://stackoverflow.com/users/1179459/mahen3d) - for idea of how to implement [time_elapsed_string](https://stackoverflow.com/questions/1416697/converting-timestamp-to-time-ago-in-php-e-g-1-day-ago-2-days-ago) function
 - [@dani krossing](https://www.youtube.com/@Dani_Krossing/) - for great beginner friendly php course
-- [dsw02A1 Tutors]() - for feedback, ideas and code reviews.
+- [dsw02A1 tutors]() - for feedback, ideas and code reviews.
