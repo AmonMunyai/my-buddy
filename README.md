@@ -1,4 +1,4 @@
-![](docs/images/landingPage.png)
+![](docs/examples/landingPage.png)
 
 <h4 align="center">myBuddy</h4>
 
@@ -82,27 +82,27 @@ Start reading at the [GitHub wiki](https://github.com/AmonMunyai/my-buddy/wiki).
 
 |landingPage|
 |---|
-|![](docs/images/landingPage.png)|
+|![](docs/examples/landingPage.png)|
 |createAccount|
-|![](docs/images/createAccount.png)|
+|![](docs/examples/createAccount.png)|
 |signIn|
-|![](docs/images/signIn.png)|
+|![](docs/examples/signIn.png)|
 |forum|
-|![](docs/images/forum.png)|
+|![](docs/examples/forum.png)|
 |addPost|
-|![](docs/images/addPost.png)|
+|![](docs/examples/addPost.png)|
 |viewPost|
-|![](docs/images/viewPost.png)|
+|![](docs/examples/viewPost.png)|
 |addAnswer|
-|![](docs/images/addAnswer.png)|
+|![](docs/examples/addAnswer.png)|
 |viewNotifications|
-|![](docs/images/viewNotifications.png)|
+|![](docs/examples/viewNotifications.png)|
 |updatePost|
-|![](docs/images/updatePost.png)|
+|![](docs/examples/updatePost.png)|
 |updateProfile|
-|![](docs/images/updateProfile.png)|
+|![](docs/examples/updateProfile.png)|
 |resetPassword|
-|![](docs/images/resetPassword.png)|
+|![](docs/examples/resetPassword.png)|
 
 ## Future Scope
 
