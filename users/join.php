@@ -7,7 +7,9 @@
         $user_lastname = strtolower($_POST["lastname"]);
         $user_email = strtolower($_POST["email"]);
         $user_password = $_POST["password"];
-        $user_avatar = ROOT_URL . "/public/assets/images/blank-profile-picture.png";
+
+        $result = file_get_contents("https://random-data-api.com/api/v2/users?response_type=json");
+        $user_avatar = json_decode($result)->avatar;
         
         if (!filter_var($user_email, FILTER_VALIDATE_EMAIL)) {
             header("Location: " . ROOT_URL . "/index.php?error=invalidmail&email=".$user_email);
