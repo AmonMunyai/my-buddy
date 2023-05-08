@@ -1,9 +1,6 @@
-![](docs/examples/landingPage.png)
+## myBuddy
 
-<h4 align="center">myBuddy</h4>
-
----
-<p align="center">Your Ultimate Guide to Varsity Life</p>
+myBuddy is a PHP based website that helps students find the answers they need, when they need them. It is a tool for empowering students to find what they need to ace student life, get ahead with course material, and build a thriving campus social life.
 
 ## Table of Contents
 - [myBuddy](#mybuddy)
@@ -14,10 +11,6 @@
 - [Future Scope](#future-scope)
 - [Authors](#authors)
 - [Acknowledgements](#acknowledgements)
-
-## myBuddy
-
-myBuddy is a PHP based website that helps students find the answers they need, when they need them. It is a tool for empowering students to find what they need to ace student life, get ahead with course material, and build a thriving campus social life.
 
 ## Features
 
