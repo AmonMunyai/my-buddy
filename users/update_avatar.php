@@ -12,9 +12,9 @@
             exit();
         }
 
-        move_uploaded_file($file['tmp_name'], "../public/assets/images/" . $user_id . "." . $file_ext);
+        move_uploaded_file($file['tmp_name'], "../public/assets/images/" . time() . "." . $file_ext);
 
-        $user_avatar = ROOT_URL . "/public/assets/images/" . $user_id . "." . $file_ext;
+        $user_avatar = ROOT_URL . "/public/assets/images/" . time() . "." . $file_ext;
 
         $sql = "UPDATE user_account SET user_avatar = ? WHERE id = ?";
         $stmt = mysqli_stmt_init($connection);
