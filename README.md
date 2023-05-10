@@ -3,6 +3,7 @@
 myBuddy is a PHP based website that helps students find the answers they need, when they need them. It is a tool for empowering students to find what they need to ace student life, get ahead with course material, and build a thriving campus social life.
 
 ## Table of Contents
+
 - [myBuddy](#mybuddy)
 - [Features](#features)
 - [Getting Started](#getting-started)
@@ -24,73 +25,73 @@ myBuddy is a PHP based website that helps students find the answers they need, w
 - Download [XAMMP](https://www.apachefriends.org/index.html) or other
 - Start Apache and MySQL
 - Clone or Download [myBuddy](https://github.com/AmonMunyai/my-buddy/archive/refs/heads/main.zip)
-    - Extract this folder in xammp htdocs as ```mybuddy```
-    - Access the website with [localhost/mybuddy](http://localhost/mybuddy/)
-- Import [mybuddy.sql](https://github.com/AmonMunyai/my-buddy/blob/main/database/mybuddy.sql)  to [PHPMyAdmin]
-    - Go to ```localhost/phpmyadmin```
-    - Select ```Import``` menu from the top
-    - Click ```Choose File``` button and select ```mybuddy.sql```
-    - Press ```Import``` at the bottom of the screen
+  - Extract this folder in xammp htdocs as `mybuddy`
+  - Access the website with [localhost/mybuddy](http://localhost/mybuddy/)
+- Import [mybuddy.sql](https://github.com/AmonMunyai/my-buddy/blob/main/database/mybuddy.sql) to [PHPMyAdmin]
+  - Go to `localhost/phpmyadmin`
+  - Select `Import` menu from the top
+  - Click `Choose File` button and select `mybuddy.sql`
+  - Press `Import` at the bottom of the screen
 
 ## Project Structure
 
-| Name | Description |
-|---|---|
-|**core**/functions.php|Contains function definitions|
-|**core**/init.php|Initiliazes database connection and definition of global constants|
-|**post**/**answers**/add_answer.php|Inserts answer comments to database|
-|**post**/**answers**/vote.php|Increment, decrement post_answer_number_of_votes|
-|**post**/create_post.php|Inserts user post question to database|
-|**post**/notification_clear.php|Removed user notifications|
-|**post**/question.php|Displays the post question, based on it's id|
-|**post**/update_post.php|Updates the post question content|
-|**public**/**assets**/**images**/|Contains the websites image assets|
-|**public**/**css**/|Contains all the css styling for the website|
-|**public**/**js**/|Contains the javascript scripts, for the website|
-|**shared**/header.php|Header section of the html document|
-|**shared**/content.php|Body section of the html document|
-|**shared**/navbar_left.php|Left navigation side bar of the html document|
-|**shared**/content.php|Header section of the html document|
-|**shared**/modal.php|Contains the modal section of the html document|
-|**shared**/footer.php|Footer section of the html document|
-|**shared**/redirect.php|Redirects user's to homepage if they are not logged in|
-|**users**/**password**/forgot.php|Handles password forgot functionality|
-|**users**/**password**/new.php|Update password page|
-|**users**/**password**/reset.php|Resets user password and updates with new password|
-|**users**/join.php|Inserts user into database|
-|**users**/logout.php|Logs out user from current session|
-|**users**/remove_avatar.php|Removes the current avatar image and replaces with blank profile image|
-|**users**/sign_in.php|Signs user in|
-|dashboard.php|Home page|
-|index.php|Landing page|
+| Name                                | Description                                                            |
+| ----------------------------------- | ---------------------------------------------------------------------- |
+| **core**/functions.php              | Contains function definitions                                          |
+| **core**/init.php                   | Initiliazes database connection and definition of global constants     |
+| **post**/**answers**/add_answer.php | Inserts answer comments to database                                    |
+| **post**/**answers**/vote.php       | Increment, decrement post_answer_number_of_votes                       |
+| **post**/create_post.php            | Inserts user post question to database                                 |
+| **post**/notification_clear.php     | Removed user notifications                                             |
+| **post**/question.php               | Displays the post question, based on it's id                           |
+| **post**/update_post.php            | Updates the post question content                                      |
+| **public**/**assets**/**images**/   | Contains the websites image assets                                     |
+| **public**/**css**/                 | Contains all the css styling for the website                           |
+| **public**/**js**/                  | Contains the javascript scripts, for the website                       |
+| **shared**/header.php               | Header section of the html document                                    |
+| **shared**/content.php              | Body section of the html document                                      |
+| **shared**/navbar_left.php          | Left navigation side bar of the html document                          |
+| **shared**/content.php              | Header section of the html document                                    |
+| **shared**/modal.php                | Contains the modal section of the html document                        |
+| **shared**/footer.php               | Footer section of the html document                                    |
+| **shared**/redirect.php             | Redirects user's to homepage if they are not logged in                 |
+| **users**/**password**/forgot.php   | Handles password forgot functionality                                  |
+| **users**/**password**/new.php      | Update password page                                                   |
+| **users**/**password**/reset.php    | Resets user password and updates with new password                     |
+| **users**/join.php                  | Inserts user into database                                             |
+| **users**/logout.php                | Logs out user from current session                                     |
+| **users**/remove_avatar.php         | Removes the current avatar image and replaces with blank profile image |
+| **users**/sign_in.php               | Signs user in                                                          |
+| dashboard.php                       | Home page                                                              |
+| index.php                           | Landing page                                                           |
 
 ## Documentation
 
 If you're having trouble, examples of how to use myBuddy for common scenarios can be found in the examples folder.
 
-|landingPage|
-|---|
-|![](docs/examples/landingPage.png)|
-|createAccount|
-|![](docs/examples/createAccount.png)|
-|signIn|
-|![](docs/examples/signIn.png)|
-|forum|
-|![](docs/examples/forum.png)|
-|addPost|
-|![](docs/examples/addPost.png)|
-|viewPost|
-|![](docs/examples/viewPost.png)|
-|addAnswer|
-|![](docs/examples/addAnswer.png)|
-|viewNotifications|
-|![](docs/examples/viewNotifications.png)|
-|updatePost|
-|![](docs/examples/updatePost.png)|
-|updateProfile|
-|![](docs/examples/updateProfile.png)|
-|resetPassword|
-|![](docs/examples/resetPassword.png)|
+| landingPage                              |
+| ---------------------------------------- |
+| ![](docs/examples/landingPage.png)       |
+| createAccount                            |
+| ![](docs/examples/createAccount.png)     |
+| signIn                                   |
+| ![](docs/examples/signIn.png)            |
+| forum                                    |
+| ![](docs/examples/forum.png)             |
+| addPost                                  |
+| ![](docs/examples/addPost.png)           |
+| viewPost                                 |
+| ![](docs/examples/viewPost.png)          |
+| addAnswer                                |
+| ![](docs/examples/addAnswer.png)         |
+| viewNotifications                        |
+| ![](docs/examples/viewNotifications.png) |
+| updatePost                               |
+| ![](docs/examples/updatePost.png)        |
+| updateProfile                            |
+| ![](docs/examples/updateProfile.png)     |
+| resetPassword                            |
+| ![](docs/examples/resetPassword.png)     |
 
 ## Future Scope
 
@@ -104,13 +105,13 @@ If you're having trouble, examples of how to use myBuddy for common scenarios ca
 ## Authors
 
 - [TA MUNYAI](https://github.com/AmonMunyai) - Initial Idea & Work
-- [T GEMBY]() - Contributor
-- [SS MHLONGO]() - Contributor
-- [MM MOKOENA]() - Contributor
-- [T MOKOTEDI]() - Contributor
+- T GEMBY - Contributor
+- SS MHLONGO - Contributor
+- MM MOKOENA - Contributor
+- T MOKOTEDI - Contributor
 
 ## Acknowledgements
 
 - [@mahon3d](https://stackoverflow.com/users/1179459/mahen3d) - for idea of how to implement [time_elapsed_string](https://stackoverflow.com/questions/1416697/converting-timestamp-to-time-ago-in-php-e-g-1-day-ago-2-days-ago) function
 - [@dani krossing](https://www.youtube.com/@Dani_Krossing/) - for great beginner friendly php course
-- [dsw02A1 tutors]() - for feedback, ideas and code reviews.
+- dsw02A1 tutors - for feedback, ideas and code reviews.
