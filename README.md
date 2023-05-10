@@ -26,12 +26,12 @@ myBuddy is a PHP based website that helps students find the answers they need, w
 - Start Apache and MySQL
 - Clone or Download [myBuddy](https://github.com/AmonMunyai/my-buddy/archive/refs/heads/main.zip)
   - Extract this folder in xammp htdocs as `mybuddy`
-  - Access the website with [localhost/mybuddy](http://localhost/mybuddy/)
 - Import [mybuddy.sql](https://github.com/AmonMunyai/my-buddy/blob/main/database/mybuddy.sql) to [PHPMyAdmin]
   - Go to `localhost/phpmyadmin`
   - Select `Import` menu from the top
   - Click `Choose File` button and select `mybuddy.sql`
   - Press `Import` at the bottom of the screen
+- Access the website with [localhost/mybuddy](http://localhost/mybuddy/)
 
 ## Project Structure
 
