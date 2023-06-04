@@ -5,12 +5,6 @@
     require_once "./core/init.php";
     require_once "./shared/header.php";
 ?>
-            <div class="navbar_buttons">
-                <a href="#" id="login-btn" class="button" onclick="toggleModal('login')">Log in</a>
-                <a href="#" id="join-btn" class="button" onclick="toggleModal('join')">Join</a>
-            </div>
-        </nav>
-    </header>
     <!-- main component -->
     <main class="main-wrapper">
         <!-- section header -->
@@ -183,12 +177,6 @@
                             </div>
                         </div>
                         <div class="spacing-block padding-small-plus"></div>
-                        <div class="panel-column">
-                            <div class="panel_item">
-                                <!-- testimonial slider -->
-                            </div>
-                        </div>
-                        <div class="spacing-block padding-small-plus"></div>
                         <div class="panels_2-column">
                             <div class="panel_item">
                                 <div class="panel_item-content">
@@ -220,103 +208,41 @@
                 <div class="container-small">
                     <div class="padding-section-small is-padding-bottom-only">
                         <div class="text-align-center">
-                            <h2 class="heading-style-h2">The latest</h2>
+                            <h2 class="heading-style-h2">The Developers</h2>
                             <div class="spacing-block padding-small-plus"></div>
-                            <p class="text-size-large">Insights from myBuddy staff and community</p>        
+                            <p class="text-size-large">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit temporibus saepe numquam.</p>        
                         </div>
                     </div>
                 </div>
                 <div class="container-large">
                     <div class="padding-section-medium is-padding-bottom-only">
-                        <div class="blog_item">
-                            <div class="blog_item-featured">
-                                <a href="#" class="blog_image-wrapper inline-block">
-                                    <img src="https://fundiconnect.co.za/wp-content/uploads/2021/06/first-job.jpg" class="blog_image" loading="lazy" alt>
-                                </a>
-                                <div class="blog_item-content">
-                                    <div class="blog_item-content-top">
-                                        <div class="simple-row">
-                                            <a href="#" class="pill">Career Insights</a>
-                                        </div>
-                                        <div class="spacing-block padding-small-plus"></div>
-                                        <a href="#" class="inline-block text-color-white">
-                                            <h3 class="heading-style-h3">7 Tips for getting a job after university.</h3>
-                                            <div class="spacing-block padding-small"></div>
-                                            <p class="text-size-medium">The transition from university to the working world can be incredibly difficult, but dont't worry!  We're here to guide you along the way. From writing a graduate CV and cover letter to applying for jobs, get work-ready with our 7 awesome tips for getting your..</p>        
-                                        </a>
-                                        <div class="spacing-block padding-small-plus"></div>
-                                    </div>
-                                    <div class="blog_author-wrapper">
-                                        <div class="profile-pic">
-                                            <img src="" loading="lazy" alt>
-                                        </div>
-                                        <div class="blog_author-text">
-                                            <div class="text-weight-bold">FundiConnect</div>
-                                            <div class="blog_date-wrapper">
-                                                <div class="text-size-small-plus">February 23, 2023</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>    
-                            </div>
-                        </div>
-                        <div class="spacing-block padding-small-plus"></div>
-                        <ul class="blog_list">
-                            <li class="blog_item">
-                                <div class="blog_item-content">
-                                    <div class="blog_item-content-top">
-                                        <div class="simple-row">
-                                            <a href="#" class="pill">Study Tips</a>
-                                        </div>
-                                        <div class="spacing-block padding-small-plus"></div>
-                                        <a href="#" class="inline-block text-color-white">
-                                            <h3 class="heading-style-h3">How to Incorporate Studying into a Daily Routine</h3>
-                                            <div class="spacing-block padding-small"></div>
-                                            <p class="text-size-medium">The best way to stay sharp and keep learning is to make studying a dailyy habit. If you struggle to form new habits or get routines to stick, here are 6 tips to keep on track.</p>        
-                                        </a>
-                                        <div class="spacing-block padding-small-plus"></div>
-                                    </div>
-                                    <div class="blog_author-wrapper">
-                                        <div class="profile-pic">
-                                            <img src="" loading="lazy" alt>
-                                        </div>
-                                        <div class="blog_author-text">
-                                            <div class="text-weight-bold">Lorem Ipsum</div>
-                                            <div class="blog_date-wrapper">
-                                                <div class="text-size-small-plus">February 10, 2023</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>    
-                            </li>
-                            <li class="blog_item">
-                                <div class="blog_item-content">
-                                    <div class="blog_item-content-top">
-                                        <div class="simple-row">
-                                            <a href="#" class="pill">NSFAS</a>
-                                        </div>
-                                        <div class="spacing-block padding-small-plus"></div>
-                                        <a href="#" class="inline-block text-color-white">
-                                            <h3 class="heading-style-h3">Are you a first year student?</h3>
-                                            <div class="spacing-block padding-small"></div>
-                                            <p class="text-size-medium">Need a place to stay near campus? We've got you covered! Heres a list of affordable and NSFAS accredited accomodation near your campus.</p>        
-                                        </a>
-                                        <div class="spacing-block padding-small-plus"></div>
-                                    </div>
-                                    <div class="blog_author-wrapper">
-                                        <div class="profile-pic">
-                                            <img src="" loading="lazy" alt>
-                                        </div>
-                                        <div class="blog_author-text">
-                                            <div class="text-weight-bold">Lorem Ipsum</div>
-                                            <div class="blog_date-wrapper">
-                                                <div class="text-size-small-plus">January 15, 2023</div>
-                                            </div>
-                                        </div>
+                    <div class="blog_item">
+                        <div class="blog_item-featured">
+                            <a href="#" class="blog_image-wrapper inline-block">
+                                <img src="public/assets/images/TA-MUNYAI.jpg" class="blog_image" loading="lazy" alt>
+                            </a>
+                            <div class="blog_item-content">
+                                <div class="blog_item-content-top">
+                                    <a href="#" class="inline-block text-color-white">
+                                        <h3 class="heading-style-h3">Front-End and Back-End Development</h3>
+                                        <div class="spacing-block padding-small"></div>
+                                        <p class="text-size-medium">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non, nam, minima numquam esse harum consectetur laudantium maxime tempore enim, dolorum voluptate beatae aut nesciunt accusamus!</p>        
+                                    </a>
+                                    <div class="spacing-block padding-small-plus"></div>
+                                </div>
+                                <div class="blog_author-wrapper">
+                                    &bull;
+                                    <div class="blog_author-text">
+                                        <div class="text-weight-bold">TA MUNYAI</div>
                                     </div>
                                 </div>
-                            </li>
-                        </ul>
+                            </div>    
+                        </div>
+                    </div>
+                    <div class="spacing-block padding-small-plus"></div>
+                    <div class="actions">
+                        <a href="developers.php" style="justify-content: center; display: flex;" class="button is-large">See All</a>
+                    </div>
                     </div>
                 </div>
             </div>
@@ -336,7 +262,8 @@
                                     <div class="spacing"></div>
                                     <p class="text-size-medium">The country's second strongest brand, offering world-class, academic programmes designed to prepare students for the world.</p>
                                     <div class="spacing-block padding-small-plus"></div>
-                                    <a href="https://www.uj.ac.za/" target="_blank" id="learn_more-btn" class="button is-large">Learn more</a>                
+                                    <a href="https://www.uj.ac.za/" target="_blank" id="learn_more-btn" class="button is-large">Learn more</a>
+                                    <div class="spacing-block padding-small"></div>
                                 </div>
                             </div>
                         </div>
@@ -349,4 +276,5 @@
 <?php
     require_once "./shared/modal.php";
     require_once "./shared/footer.php";
+    require_once "./shared/error.php";
 ?>
