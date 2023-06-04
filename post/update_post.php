@@ -7,7 +7,7 @@
         $content = $_POST['content'];
 
         if (!preg_match("/^[a-zA-Z0-9_]+(?:\W+[a-zA-Z0-9_]+)*\W*$/", $title)) {
-            header("Location: " . ROOT_URL . "/post/question.php?id=" . $post_id . "error=invalidtopic&content=" . $content);
+            header("Location: " . ROOT_URL . "/post/question.php?id=" . $post_id . "error=invalidtitle&content=" . $content);
             exit();
         } else {
                 $sql = "UPDATE post SET post_title=?, post_content=?, post_created_date=now() WHERE id=?";
