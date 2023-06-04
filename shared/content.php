@@ -20,8 +20,7 @@
                                         </div>
                                         <div class="user-card">
                                             <div class="user-card-profile-pic">
-                                                <?php $post_avatar = $post['post_created_by_avatar'] ?? ROOT_URL . "/public/assets/images/blank-profile-picture.png"; ?>
-                                                <img src="<?php echo $post_avatar; ?>" loading="lazy" alt>
+                                                <img src="<?php echo $post['post_created_by_avatar']; ?>" loading="lazy" alt>
                                             </div>
                                             <div class="user-card-info">
                                                 <div class="user-card-link">
