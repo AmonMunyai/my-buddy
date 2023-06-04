@@ -29,7 +29,7 @@
         $post_content = $row['post_content'];
         $post_created_by_id = $row['post_created_by_id'];
 
-        $sql = "SELECT user_email FROM user_account WHERE id=" . $post_created_by_id;
+        $sql = "SELECT user_email FROM user WHERE id=" . $post_created_by_id;
         $result = mysqli_query($connection, $sql);
         $row = mysqli_fetch_assoc($result);
         $user_email = $row['user_email'];
@@ -95,8 +95,8 @@
                             $mail->isSMTP();
                             $mail->Host = "smtp.gmail.com";
                             $mail->SMTPAuth = true;
-                            $mail->Username = "";
-                            $mail->Password = "";
+                            $mail->Username = "Kaisermrepper@gmail.com";
+                            $mail->Password = "opbvoepwqlfigxkg";
                             $mail->Port = 465; // 587
                             $mail->SMTPSecure = "ssl"; // tls
                     
