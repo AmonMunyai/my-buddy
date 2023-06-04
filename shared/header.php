@@ -23,7 +23,7 @@
                     <ul class="navbar_menu-links">
                         <li><a href="#" class="navbar_link">Blog</a></li>
                         <li><a href="#" class="navbar_link">Docs</a></li>
-                        <li><a href="developers.php" class="navbar_link">Developers</a></li>
+                        <li><a href="http://localhost/mybuddy/developers.php" class="navbar_link">Developers</a></li>
                     </ul>
                     <div class="navbar_menu-buttons">
                         <?php
