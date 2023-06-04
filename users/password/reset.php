@@ -43,7 +43,7 @@
                 } else if ($token_check === true) {
                     $token_email = $row['password_reset_email'];
 
-                    $sql = "SELECT * FROM user_account WHERE user_email = ?";
+                    $sql = "SELECT * FROM user WHERE user_email = ?";
                     $stmt = mysqli_stmt_init($connection);
                 
                     if (!mysqli_stmt_prepare($stmt, $sql)) {
@@ -56,10 +56,10 @@
                         $row = mysqli_fetch_assoc($result);
 
                         if (!$row) {
-                            echo "There was an error";
+                            header("Location: " . ROOT_URL . "/users/password/new.php?error=invalid");
                             exit();
                         } else {
-                            $sql = "UPDATE user_account SET user_password = ? WHERE user_email = ?";
+                            $sql = "UPDATE user SET user_password = ? WHERE user_email = ?";
                             $stmt = mysqli_stmt_init($connection);
                         
                             if (!mysqli_stmt_prepare($stmt, $sql)) {
