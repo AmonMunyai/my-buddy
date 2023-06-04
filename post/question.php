@@ -32,21 +32,6 @@
     $description = "";
     require_once "../shared/header.php";
 ?>
-            <div class="navbar_buttons">
-                <?php
-                if (isset($_SESSION['user_id'])) {
-                    echo '<a href="' . ROOT_URL . '/users/logout.php" id="logout-btn" class="button">Log out</a>';
-                } else {
-                    echo
-                    '<a href="#" id="login-btn" class="button" onclick="toggleModal(' . "'login'" . ')">Log in</a>
-                <a href="#" id="join-btn" class="button" onclick="toggleModal(' . "'join'" . ')">Join</a>
-';
-                }
-                ?>
-            </div>
-        </nav>
-    </header>
-
     <!-- main content -->
     <main class="main-wrapper">
         <section class="section_home">
@@ -106,7 +91,6 @@
                             <div class="line-divider"></div>
                         </div>
                         <div class="spacing-block padding-medium"></div>
-                        
                         <?php
                             $post_id = $_GET['id'];
 
@@ -114,12 +98,13 @@
                             $post_answers = mysqli_query($connection, $sql);
 
                             if (mysqli_num_rows($post_answers) == 0) {
-                                echo '<p class="text-align-center text-muted text-size-small">0 answers</p>
+                        ?>
+                        <p class="text-align-center text-muted text-size-small">0 answers</p>
                         <div class="spacing-block padding-medium"></div>
                         <div class="spacing-block padding-medium"></div>
-';
-                            } else { ?>
-                            
+                        <?php
+                            } else {
+                        ?>    
                         <ul class="answers">
                             <?php foreach($post_answers as $post_answer) { ?>
                             <li class="answer">
@@ -130,7 +115,7 @@
                                                 <img src="<?php echo $post_answer['post_answer_created_by_avatar']; ?>" loading="lazy" alt>
                                             </div>
                                             <div class="user-card-link">
-                                                <h4 class="text-weight-bold"><a href="#" class="text-color-uj"><?php $post_answer['post_answer_created_by']; ?></a></h4>
+                                                <h4 class="text-weight-bold"><a href="#" class="text-color-uj"><?php echo $post_answer['post_answer_created_by']; ?></a></h4>
                                             </div>
                                         </div>
                                         <div class="answer-vote">
@@ -144,9 +129,9 @@
                                                 $sql = "SELECT * FROM post_answer_vote WHERE post_id=" . $post_answer['id'];
                                                 $post_answer_number_of_votes = mysqli_num_rows(mysqli_query($connection, $sql));
                                             ?>
-                                            <a id="upvote-btn" <?php echo $redirect . "&vote=up"; ?> class="fa fa-thumbs-up voting-button"></a>
+                                            <a id="upvote-btn" <?php echo $redirect . "&vote=up"; ?> class="fa fa-arrow-up voting-button"></a>
                                             <div class="answer-score text-muted text-size-small"><?php echo $post_answer_number_of_votes?></div>
-                                            <a id="downvote-btn" <?php echo $redirect . "&vote=down"; ?> class="fa fa-thumbs-down voting-button"></a>
+                                            <a id="downvote-btn" <?php echo $redirect . "&vote=down"; ?> class="fa fa-arrow-down voting-button"></a>
                                         </div>
                                     </div>
                                     <div class="spacing-block padding-small"></div>
