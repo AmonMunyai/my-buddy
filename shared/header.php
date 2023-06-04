@@ -14,12 +14,37 @@
 <body>
     <!-- navigation bar -->
     <header>
-        <nav class="navbar navbar-top">
-            <a href="http://localhost/mybuddy/dashboard.php" class="navbar_logo-link text-color-white">
-                <h1 class="navbar_logo">my<span class="text-color-uj">Buddy</span></h1>
-            </a>
-            <ul class="navbar_links">
-                <li><a href="#" class="navbar_link">Blog</a></li>
-                <li><a href="#" class="navbar_link">Docs</a></li>
-                <li><a href="#" class="navbar_link">Developers</a></li>
-            </ul>
+        <div class="navbar_component">
+            <div class="navbar_container">
+                <a href="http://localhost/mybuddy/dashboard.php" class="navbar_logo-link text-color-white">
+                    <h1 class="navbar_logo">my<span class="text-color-uj">Buddy</span></h1>
+                </a>
+                <nav class="navbar_menu navbar-top">
+                    <ul class="navbar_menu-links">
+                        <li><a href="#" class="navbar_link">Blog</a></li>
+                        <li><a href="#" class="navbar_link">Docs</a></li>
+                        <li><a href="developers.php" class="navbar_link">Developers</a></li>
+                    </ul>
+                    <div class="navbar_menu-buttons">
+                        <?php
+                        if (isset($_SESSION['user_id'])) {
+                        ?>
+                        <a href="<?php echo ROOT_URL; ?>/users/logout.php" id="logout-btn" class="button is-small">Log out</a>
+                        <?php
+                        } else {
+                        ?>
+                        <a href="#" id="login-btn" class="button is-small" onclick="toggleModal('login')">Log in</a>
+                        <a href="#" id="join-btn" class="button is-small" onclick="toggleModal('join')">Join</a>
+                        <?php
+                        }
+                        ?>
+                    </div>
+                </nav>
+                <div class="menu-icon">
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                </div>
+            </div>
+        </div>
+    </header>
