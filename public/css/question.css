@@ -93,7 +93,7 @@
 }
 
 .answer-vote > a:hover {
-    transform: scale(1.2);
+    transform: scale(1.0125);
 }
 
 #downvote-btn:hover {
@@ -104,6 +104,12 @@
     color: green;
 }
 
-/* .fa-thumbs-down {
-    transform: translateY(90deg);
-} */
+@media screen and (max-width: 767px) {
+    .question-content {
+        padding: 1.25rem;
+    }
+
+    .answer-content {
+        padding: 1.25rem 1.25rem 0.875rem;
+    }
+}
