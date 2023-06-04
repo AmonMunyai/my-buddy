@@ -13,9 +13,9 @@
                 <div class="container-medium">
                     <div class="padding-section-medium">
                         <div class="text-align-center">
-                            <h1 class="text-color-white heading-style-h1">Diliza Developers</h1>
+                            <h1 class="text-color-white heading-style-h1">Meet The Team</h1>
                             <div class="spacing-block padding-small-plus"></div>
-                            <p class="text-size-large">Our mission is to help students get familiar with student life, improve social interaction, and stay updated with campus news.</p>
+                            <p class="text-size-large"><em>"Individuals can and do make a difference, but it takes a team to really mess things up."</em></p>
                         </div>
                     </div>
                 </div>
@@ -58,7 +58,7 @@
                                 <div class="blog_item-content">
                                     <div class="blog_item-content-top">
                                         <a href="#" class="inline-block text-color-white">
-                                            <h3 class="heading-style-h3">Contributor</h3>
+                                            <h3 class="heading-style-h3">Analyst</h3>
                                             <div class="spacing-block padding-small"></div>
                                             <p class="text-size-medium">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit voluptatibus iure saepe non numquam veniam exercitationem, voluptatum, eaque rem vel cum. Unde omnis aliquid dolorum!</p>        
                                         </a>
