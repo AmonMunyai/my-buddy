@@ -7,12 +7,14 @@
 
         $file = "../public/assets/images/" . $user_id . ".*";
 
-        if (!array_map('unlink', glob($file))) {
-            header("Location: " . ROOT_URL . "/dashboard.php?error=removefile");
-            exit();
+        if (file_exists($file)) {
+            if (!array_map('unlink', glob($file))) {
+                header("Location: " . ROOT_URL . "/dashboard.php?error=removefile");
+                exit();
+            }    
         }
 
-        $sql = "UPDATE user_account SET user_avatar = ? WHERE id = ?";
+        $sql = "UPDATE user SET user_avatar = ? WHERE id = ?";
         $stmt = mysqli_stmt_init($connection);
         if (!mysqli_stmt_prepare($stmt, $sql)) {
             header("Location: " . ROOT_URL . "/dashboard.php?error=sqlerror");
