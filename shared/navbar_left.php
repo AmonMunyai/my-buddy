@@ -1,34 +1,41 @@
 <?php
-    if (isset($_SESSION['user_firstname']) && isset($_SESSION['user_lastname'])) {
-        $user_display_name = ucfirst($_SESSION['user_firstname']) . " " . ucfirst($_SESSION['user_lastname']);
+    if (isset($_SESSION['user_username'])) {
+        $user_display_name = "@" . strtolower($_SESSION['user_username']);
 
-        $sql = "SELECT user_avatar FROM user_account WHERE id = " . $_SESSION['user_id'];
+        $sql = "SELECT user_avatar FROM user WHERE id = " . $_SESSION['user_id'];
         $result = mysqli_query($connection, $sql);
         $user = mysqli_fetch_assoc($result);
 
         $user_avatar = $user['user_avatar'];
         $user_display_page = 'onclick="toggleModal(' . "'profile'" . ')"';
     } else {
-        $user_display_name = "Guest";
+        $random_data_api = file_get_contents("https://random-data-api.com/api/v2/users?response_type=json");
+        if ($random_data_api) {
+            $user_avatar = json_decode($random_data_api)->avatar;
+        } else {
+            $user_avatar = ROOT_URL . "/public/assets/images/blank-profile-picture.png";
+        }
+        $user_display_name = "@guest" . bin2hex(random_bytes(2));
         $user_display_page = 'onclick="toggleModal(' . "'login'" . ')"';
     }
 ?>
-<!-- left side navigation bar -->
-                    <nav class="sidebar_left">
-                        <div class="profile text-align-center">
-                            <a <?php echo $user_display_page?> class="profile-link">
-                                <div class="profile-pic">
-                                    <img src="<?php echo $user_avatar; ?>" loading="lazy" alt>
-                                </div>
+                    <!-- left side navigation bar -->
+                    <nav class="sidebar">
+                        <header>
+                            <div class="profile">
+                                <a <?php echo $user_display_page; ?> class="profile-link">
+                                    <div class="profile-pic">
+                                        <img src="<?php echo $user_avatar; ?>" loading="lazy" alt>
+                                    </div>
+                                </a>
                                 <div class="spacing-block padding-small"></div>
-                                <div class="profile-name">
-                                    <h4> <?php echo $user_display_name; ?></h4>
-                                </div>
-                            </a>
-                        </div>
+                                <span class="sidebar-item"><?php echo $user_display_name; ?></span>
+                            </div>
+                        </header>
                         <div class="line-divider"></div>
-                        <div class="sidebar_left-links text-size-small">
-                            <ul>
+                        <div class="spacing-block padding-small"></div>
+                        <ul class="sidebar-links">
+                            <li>
                                 <?php
                                     if ($user_display_name == "guest") {
                                         $redirect = 'onclick="toggleModal(' . "'login'" . ')"';
@@ -36,33 +43,58 @@
                                         $redirect = 'href="' . ROOT_URL . '/dashboard.php"';
                                     }
                                 ?>
-                                <li><a <?php echo $redirect; ?> class="sidebar-link"><i class="fa fa-home"></i>Home</a></li>
-                                <li><a href="#" class="sidebar-link" onclick="toggleModal('search')"><i class="fa fa-search"></i>Search </a></li>
-                                <!-- <li><a href="#" class="sidebar-link"><i class="fa fa-compass"></i>Explore</a></li> -->
+                                <a <?php echo $redirect; ?> class="sidebar-link">
+                                    <i class="fa fa-home"></i>
+                                    <span class="sidebar-item text-size-small">Home</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="sidebar-link" onclick="toggleModal('search')">
+                                    <i class="fa fa-search"></i>
+                                    <span class="sidebar-item text-size-small">Search</span>
+                                </a>
+                            </li>
+                            <li>
                                 <?php
-                                    if ($user_display_name !== "guest") {
+                                    if ($user_display_name !== "guest" && isset($_SESSION["user_id"])) {
                                         $sql = "SELECT * FROM user_notification WHERE user_id=" . $_SESSION['user_id'];
                                         $notifications = mysqli_query($connection, $sql);
                 
                                         if (mysqli_num_rows($notifications) > 0) {        
                                 ?>
-                                <li><a href="#" class="sidebar-link text-color-uj" onclick="toggleModal('notifications')"><i class="fa fa-bell"></i>Notifications</a></li>
+                                <a href="#" class="sidebar-link text-color-uj" onclick="toggleModal('notifications')">
+                                    <i class="fa fa-bell"></i>
+                                    <span class="sidebar-item text-size-small">Notifications</span>
+                                </a>
                                 <?php
                                         } else {
                                 ?>
-                                <li><a href="#" class="sidebar-link" onclick="toggleModal('notifications')"><i class="fa fa-bell""></i>Notifications</a></li>
+                                <a href="#" class="sidebar-link" onclick="toggleModal('notifications')">
+                                    <i class="fa fa-bell"></i>
+                                    <span class="sidebar-item text-size-small">Notifications</span>
+                                </a>
                                 <?php
                                         }
                                     }
                                 ?>
-                                <li><a href="#" class="sidebar-link"><i class="fa fa-users"></i>Communities</a></li>
+                            </li>
+                            <li>
+                                <a href="#" class="sidebar-link">
+                                    <i class="fa fa-users"></i>
+                                    <span class="sidebar-item text-size-small">Communities</span>
+                                </a>
+                            </li>
+                            <li>
                                 <?php
                                     if ($user_display_name !== "guest") {
-                                ?>                                
-                                <li><a href="#" class="sidebar-link" onclick="toggleModal('create-post')"><i class="fa fa-question"></i>Ask a Buddy?</a></li>
+                                ?>  
+                                <a href="#" class="sidebar-link" onclick="toggleModal('create-post')">
+                                    <i class="fa fa-question"></i>
+                                    <span class="sidebar-item text-size-small">Ask a Buddy?</span>
+                                </a>
                                 <?php
                                     }
                                 ?>
-</ul>
-                        </div>
+                            </li>
+                        </ul>
                     </nav>
