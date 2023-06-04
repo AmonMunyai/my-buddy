@@ -11,7 +11,7 @@
         $notification_email_status = $_POST['mailsend'] ?? 0;
 
         if (!preg_match("/^[a-zA-Z0-9_]+(?:\W+[a-zA-Z0-9_]+)*\W*$/", $title)) {
-            header("Location: " . ROOT_URL . "/dashboard.php?error=invalidtopic&content=".$content);
+            header("Location: " . ROOT_URL . "/dashboard.php?error=invalidtitle&content=".$content);
             exit();
         } else {
             $sql = "INSERT INTO post (post_title, post_content, post_created_date, post_created_by, post_created_by_id, post_created_by_avatar, post_number_of_answers, post_notification_email_status) VALUES (?, ?, now(), ?, ?, ?, 0, ?)";
