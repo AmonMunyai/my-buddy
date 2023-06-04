@@ -9,12 +9,11 @@
                 </div>
                 <div class="spacing-block padding-small"></div>
                 <div class="line-divider"></div>
-                <div class="flash-msg"></div>
                 <div class="modal-body">
                     <form action="<?php echo ROOT_URL; ?>/users/sign_in.php" method="post">
                         <div class="form-group form-input-wrapper">
                             <div class="form-input">
-                                <input type="email" name="email" placeholder="Email" autocomplete="off" required>
+                                <input type="text" name="email" placeholder="Username or Email" autocomplete="off" required>
                             </div>
                             <div class="line-divider"></div>
                             <div class="form-input">
@@ -52,11 +51,7 @@
                     <form action="<?php echo ROOT_URL; ?>/users/join.php" method="post">
                         <div class="form-group form-input-wrapper">
                             <div class="form-input">
-                                <input type="text" name="firstname" placeholder="First name" autocomplete="off" required>
-                            </div>
-                            <div class="line-divider"></div>
-                            <div class="form-input">
-                                <input type="text" name="lastname" placeholder="Surname" autocomplete="off" required>
+                                <input type="text" name="username" placeholder="Username" autocomplete="off" required>
                             </div>
                             <div class="line-divider"></div>
                             <div class="form-input">
@@ -68,7 +63,7 @@
                             </div>    
                         </div>
                         <div class="form-group">
-                            <button type="submit" name="join-submit" class="button-submit" onclick="handleModalErrors()">Join</button>
+                            <button type="submit" name="join-submit" class="button-submit">Join</button>
                         </div>
                     </form>
                 </div>
@@ -187,36 +182,18 @@
                 <div class="spacing-block padding-small"></div>
                 <div class="line-divider"></div>
                 <div class="modal-body">
-                    <?php
-                        if (isset($post)) {
-                            echo '<form action="' . ROOT_URL . '/dashboard.php' . '" method="post">';
-                        } else {
-                            echo '<form>';
-                        }
-                    ?>
+                    <!-- <form> -->
+                    <form action="<?php echo ROOT_URL; ?>/dashboard.php" method="get">
                         <div class="form-group form-input-wrapper">
                             <div class="form-input">
-                                <input name="query" type="text" placeholder="Search.." autocomplete="off">
+                                <input name="q" type="text" placeholder="Search.." autocomplete="off">
                             </div>
                             <div class="line-divider"></div>
                             <div class="form-input">
                             </div>
                         </div>
-
                         <div class="spacing-block padding-medium"></div>
                         <div class="line-divider"></div>
-
-                        <!-- <div class="form-group recent-search">
-                            <div class="line-separator-wrapper">
-                                <div class="line-divider"></div>
-                                <h5 class="line-separator">Recents</h5>
-                                <div class="line-divider"></div>
-                            </div>
-                            <div class="spacing-block padding-small"></div>
-                            <div id="recent-status" class="text-size-xsmall text-align-center text-muted">No recent searches.</div>
-                            <ul class="recent-list"></ul>
-                            <button name="clear-btn" id="clear-search-btn" class="underline text-size-xsmall is-hidden" onclick="clearSearchHistory()">clear all</button>    
-                        </div> -->
                         <div class="form-group">
                             <button type="submit" name="search-submit" id="search-btn" class="button-submit">Search</button>
                         </div>
