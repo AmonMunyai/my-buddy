@@ -44,3 +44,12 @@ const removeAvatarBtn = document.getElementById('remove-avatar-btn');
 const profileForm = document.getElementById('profile');
 
 uploadAvatarBtn.onclick = () => document.getElementById('upload-image').click();
+
+
+// Navigation menu toggle
+const menuIcon = document.querySelector(".menu-icon");
+
+menuIcon.addEventListener('click', () => {
+    const navMenu = document.querySelector(".navbar_menu");
+    navMenu.classList.toggle('is-active');
+})
