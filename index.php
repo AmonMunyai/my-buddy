@@ -208,9 +208,9 @@
                 <div class="container-small">
                     <div class="padding-section-small is-padding-bottom-only">
                         <div class="text-align-center">
-                            <h2 class="heading-style-h2">The Developers</h2>
+                            <h2 class="heading-style-h2">Meet The Team</h2>
                             <div class="spacing-block padding-small-plus"></div>
-                            <p class="text-size-large">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit temporibus saepe numquam.</p>        
+                            <p class="text-size-large"><em>"Individuals can and do make a difference, but it takes a team to really mess things up."</em></p>        
                         </div>
                     </div>
                 </div>
