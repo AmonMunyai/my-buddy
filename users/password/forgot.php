@@ -17,6 +17,11 @@
 
         $user_email = $_POST['email'];
 
+        if (!filter_var($user_email, FILTER_VALIDATE_EMAIL)) {
+            header("Location: " . ROOT_URL . "/index.php?error=invalidmail&email=".$user_email);
+            exit();
+        }
+
         $sql = "DELETE FROM password_reset WHERE password_reset_email=?";
         $stmt = mysqli_stmt_init($connection);
 
@@ -48,8 +53,8 @@
         $mail->isSMTP();
         $mail->Host = "smtp.gmail.com";
         $mail->SMTPAuth = true;
-        $mail->Username = "";
-        $mail->Password = "";
+        $mail->Username = "Kaisermrepper@gmail.com";
+        $mail->Password = "opbvoepwqlfigxkg";
         $mail->Port = 465; // 587
         $mail->SMTPSecure = "ssl"; // tls
 
@@ -72,9 +77,9 @@
         if ($mail->send()) {
             header("Location: " . ROOT_URL . "/index.php?reset=success");
         } else {
-            header("Location: " . ROOT_URL . "/index.php?reset=failure");
+            header("Location: " . ROOT_URL . "/index.php?error=reset");
         }
     } else {
-        header("Location: " . ROOT_URL . "/index.php?error=ofsorts");
+        header("Location: " . ROOT_URL . "/index.php?error=invalid");
         exit();
     }
