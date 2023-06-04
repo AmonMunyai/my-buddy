@@ -21,6 +21,9 @@ SET time_zone = "+00:00";
 -- Database: `mybuddy`
 --
 
+CREATE DATABASE IF NOT EXISTS mybuddy;
+USE mybuddy;
+
 -- --------------------------------------------------------
 
 --
@@ -128,12 +131,12 @@ CREATE TABLE `post_answer_vote` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `user_account`
+-- Table structure for table `user`
 --
 
-CREATE TABLE `user_account` (
+CREATE TABLE `user` (
   `id` int(11) NOT NULL,
-  `user_firstname` varchar(255) NOT NULL,
+  `user_username` varchar(255) NOT NULL,
   `user_lastname` varchar(255) NOT NULL,
   `user_email` varchar(255) NOT NULL,
   `user_password` varchar(255) NOT NULL,
@@ -141,10 +144,10 @@ CREATE TABLE `user_account` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `user_account`
+-- Dumping data for table `user`
 --
 
-INSERT INTO `user_account` (`id`, `user_firstname`, `user_lastname`, `user_email`, `user_password`, `user_avatar`) VALUES
+INSERT INTO `user` (`id`, `user_username`, `user_lastname`, `user_email`, `user_password`, `user_avatar`) VALUES
 (1, 'amon', 'munyai', 'amonmunyai11@gmail.com', '$2y$10$EWp2v3xpD3xx793D6LuoneKTv4t42ItnxWz0vgVtsyH7sxozfypdK', 'http://localhost/mybuddy/public/assets/images/1.jpg'),
 (2, 'john', 'doe', 'johndoe@gmail.com', '$2y$10$dw0zVYFggwACzM3zvRYXeO5Ifs4gads.3TKEaTj3hVDabJSc7kzRi', 'http://localhost/mybuddy/public/assets/images/2.jpg');
 
@@ -211,9 +214,9 @@ ALTER TABLE `post_answer_vote`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `user_account`
+-- Indexes for table `user`
 --
-ALTER TABLE `user_account`
+ALTER TABLE `user`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -263,9 +266,9 @@ ALTER TABLE `post_answer_vote`
   MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `user_account`
+-- AUTO_INCREMENT for table `user`
 --
-ALTER TABLE `user_account`
+ALTER TABLE `user`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
