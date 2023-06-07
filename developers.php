@@ -74,12 +74,12 @@
                             </li>
                             <li class="blog_item">
                                 <a href="#" class="blog_image-wrapper">
-                                    <img src="public/assets/images/blank-profile-picture.png" class="blog_image" loading="lazy" alt>
+                                    <img src="public/assets/images/SS-MHLONGO.jpg " class="blog_image" loading="lazy" alt>
                                 </a>
                                 <div class="blog_item-content">
                                     <div class="blog_item-content-top">
                                         <a href="#" class="inline-block text-color-white">
-                                            <h3 class="heading-style-h3">Contributor</h3>
+                                            <h3 class="heading-style-h3">Project Manager</h3>
                                             <div class="spacing-block padding-small"></div>
                                             <p class="text-size-medium">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit voluptatibus iure saepe non numquam veniam exercitationem, voluptatum, eaque rem vel cum. Unde omnis aliquid dolorum!</p>        
                                         </a>
@@ -116,12 +116,12 @@
                             </li>
                             <li class="blog_item">
                                 <a href="#" class="blog_image-wrapper">
-                                    <img src="public/assets/images/blank-profile-picture.png" class="blog_image" loading="lazy" alt>
+                                    <img src="public/assets/images/T-MOKOTEDI.jpg" class="blog_image" loading="lazy" alt>
                                 </a>
                                 <div class="blog_item-content">
                                     <div class="blog_item-content-top">
                                         <a href="#" class="inline-block text-color-white">
-                                            <h3 class="heading-style-h3">Contributor</h3>
+                                            <h3 class="heading-style-h3">The Quality Tester</h3>
                                             <div class="spacing-block padding-small"></div>
                                             <p class="text-size-medium">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit voluptatibus iure saepe non numquam veniam exercitationem, voluptatum, eaque rem vel cum. Unde omnis aliquid dolorum!</p>        
                                         </a>
